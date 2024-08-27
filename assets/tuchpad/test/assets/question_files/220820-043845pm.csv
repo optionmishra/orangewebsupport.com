@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Home tab includes formatting elements such as ____________ .,Text wrap,Cell style,Both A and B,None of these,C,1
+What is the collection of different worksheets called?,Workbook,Vertical,Cell,None of these,A,1
+Cell is the intersection of ____________ .,Row,Column,Both A and B,None of these,C,1
+Vertical divisions are called ____________ .,Rows,Columns,Cells,None of these,B,1
+The Ctrl + Z key is used to perform the ____________ operation.,Undo,Cut,Redo,All of these,A,1
+ You can specify a column width of 0 to ____________ .,255,256,409,All of these,A,1
+We can edit the content of a cell by ____________ on it.,Right-clicking,Double-clicking,Clicking,All of these,B,1
+Which of the following functions is used to calculate the average of a range of values?,AVERAGE,SUM,AVG,None of these,A,1
+What is the cell address in the formula known as?,Range,Cell reference,Mixed reference,All of these,B,1
+What is the group of selected cells called?,Selection,Combination,Cell range,None of these,C,1

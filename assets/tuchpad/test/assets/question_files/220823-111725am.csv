@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which command is used to move turtle back?  ,FD,RT,BK,HT,C,1
+Which command is used to turn the turtle’s face toward right?  ,RT,HT,LT,BK,C,1
+Which command is used to erase the text?,CT,CS,LT,FD,A,1
+The short form of FORWARD command is ____________ .  ,FO,FD,FW,FR,B,1
+____________ command clears the drawing on the screen and brings the turtle back to the starting position.  ,ERASE,HOME,CLEARSCREEN,CLOSE,C,1
+"____________ tool is used to put pattern produced by arranging together small pieces of stone, tile, glass, etc.  ",Tile,Wipe,Mosaic,Pause,C,1
+The mascot of Tux Paint is ____________ .  ,Penguin,Monkey,Lion,Cat,A,1
+____________ effect is used to fill colours in any closed shape.  ,Fill,Paint,Foam,Magic,A,1
+____________ tool is used to give a wipe effect.  ,Slide,Smudge,Magic,New,B,1
+____________ tool is to repeat the drawing action you just reversed. ,Undo,Redo,Repeat,Exit,A,1

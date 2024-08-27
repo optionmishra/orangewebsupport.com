@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following terms describes a computer that is connected to a network? ,Node,Unit,Device,Technology,A,1
+What is a computer network that spans across a city called? ,LAN ,MAN,WAN,PAN,B,1
+Which networking device can convert the digital data into analog signal and vice-versa? ,Hub,Router ,Modem,NIC,C,1
+"In which topology, the central node acts as a hub or router to which all the other nodes are connected? ",Star,Ring,Mesh,Bus,A,1
+Which of the following is a collection of characters and symbols that has no meaning? ,Data ,Information ,Field,All of these,A,1
+Which one of these helps to store and retrieve a large amount of data efficiently? ,Record,Database,Information,Field,B,1
+Which of the following is a group of related data organised in columns and rows in a database? ,Table,Row,Column,Field,A,1
+A ____________ is a database object to that is specially designed to display or print the data in the formatted way. ,Form,Table,Report,Query,A,1
+The total diameter of LAN is not more than ____________ .,25 KM ,20 KM,5 KM,15 KM,C,1
+____________ is a unique field by which athe records are uniquely identified in a table.,Form,Primary Key,Table,Report,B,1

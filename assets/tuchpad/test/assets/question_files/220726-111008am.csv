@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following is a conditional statement in BASIC-256? ,IF-THEN  ,IF-THEN-ELSE   ,Both A and B  ,None of these,C,1
+What does a loop do? ,Repeats a section of code  ,Sets a variable name   ,Chooses a path to take   ,All of these,A,1
+"What will be the output of the following program? FOR i = 10 TO 1 STEP – 4   PRINT i + "" "" ",1062,2610,1062,10,C,1
+"In the given statement, what is i? FOR i = 1 TO 100  ",Branch ,Condition,Counter variable   ,Property,C,1
+Which of the following symbol(s) is/are used for comments in Python? ,//,"""",/**/,$,D,1
+The statement using AND operator results true if ____________ . ,Both operands are true  ,Both operands are false   ,Either of the operands is true  ,Neither of the operands is true   ,A,1
+What can we achieve by using AI in education? ,Quality education  ,Quality books  ,Quality food  ,Quality time   ,A,1
+In which year did the idea of SDG from the Rio+20 Summit came? ,2010,2011,2012,2014,C,1
+"Which of the following SDG targets to prevent and reduce marine pollution, protect marine and coastal ecosystems, regulate harvesting and end destructive fishing practices? ",SDG 13  ,SDG 14  ,SDG 17  ,None of these,B,1
+By which year does the SDG 2 aims to end hunger? ,2025,2030,2035,3030,B,1

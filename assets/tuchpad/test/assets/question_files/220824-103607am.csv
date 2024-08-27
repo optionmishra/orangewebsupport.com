@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+A language translator is a software that converts a High-Level Language (HLL) program into a ____________ language. ,Symbolic,Human,Machine,English,C,1
+"In machine language, ‘0’ and ‘1’ are ____________ .  ",Binary digits  ,Bytes,Numbers,Digits,A,1
+The language understood by the computer is ____________,Assembly language  ,High-level language   ,Machine language  ,4GL,C,1
+A computer programmer draws a ____________ before writing a computer program.  ,Chart,Scenery,Flowchart,Syntax,C,1
+A variable that contains a whole number is called ____________ .,String,Integer ,Boolean,Real Number   ,B,1
+Which key is used to run a program in BASIC-256?,Enter,F10,F5,F12,C,1
+Which of the following are used to hold values? ,Blocks,Operators,Variables,Sprites,C,1
+Which types of operators are used to compare two variables?  ,Mathematical,Relational,Logical,Assignment,B,1
+Which of the following blocks is used to hide the sprite from the stage?,show,hide,escape,visible,B,1
+The ____________ statement is used to create comments in BASIC-256.,PRINT,REM,INPUT,END,B,1

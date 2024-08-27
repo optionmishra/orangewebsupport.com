@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+The ____________ tool is used to draw closed figures and inter-connected lines. ,Pencil,Polyline,Ink   ,Rectangle,B,1
+____________ tool helps us to draw curved lines.,Line,Brush,Polyline,Rectangle,C,1
+Which tool works like a Paint Bucket tool? ,Pencil,Fill,Ink   ,Brushes,B,1
+Library button is located on the ____________ bar. ,Right side,Top center side,Bottom side,Left side,D,1
+____________ tween controls the transparency level of the object. ,Coloring,Opacity,Scale,Shear,B,1
+____________ changes the color of the object at two points. ,Shear Tween,Scale Tween,Coloring tween,Rotation Tween,C,1
+Which tween helps to give zooming effect to an object?,Coloring,Opacity,Scale,Shear,C,1
+The tool used to detect the edges of the image automatically is ____________ . ,Fuzzy Select Tool  ,Marquee Tool   ,Zoom Tool   ,Crop Tool   ,A,1
+The default extension of an GIMP file is ........................ . ,psd,docx,xcf,pdd,C,1
+____________ tool is used to select a circular area on the image. ,Rectangle Select,Free Select,Oval Select,Ellipse Select,D,1

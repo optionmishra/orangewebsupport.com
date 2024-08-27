@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following is a selective structure?,"Identifiers, Operators","If, If-else","For, While",None of these,B,1
+Which of the following is a decision-making statement?,If,For,While,do While,A,1
+Which statement is used in loops to terminate the loop?,If,Continue,Break,All of these,C,1
+Which of the following statements is used to repeat a block of code?,For,Range,Both A & B,if-else,A,1
+The first step of creating a function is ___________,Calling,Defining,Erasing,Printing,B,1
+Which type of function is append( )?,Built-in  ,User-defined,Not a valid function,None of these,A,1
+What is the input given to the functions referred to as?,Return Value,Name,Arguments,None of these,C,1
+Which user-defined function takes parameters and returns output?,type1,type2,type3,None of these,C,1
+Which of the following is used to insert special characters that are invalid in Python?,Escape sequence,Strings,Lists,None of these,A,1
+Which operator is used to repeat the string for a given number of times?,String Concatenation Operator,String Replication Operator,len()  ,None of these,B,1

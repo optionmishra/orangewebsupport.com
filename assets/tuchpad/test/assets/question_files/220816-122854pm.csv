@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+The default data type for Primary Key is ____________.,Text,Number,Auto Number,OLE,C,1
+Arranging the records in a particular order is called ____________.,Query,Report,Table,All of these,B,1
+Which networking device can convert the digital data into analog signal and vice versa?,Hub,Router,Modem,LAN Card,C,1
+"In this topology the central node acts as a hub, switch or router to which all the other nodes are connected.",Bus,Star,Ring,Mesh,C,1
+The computer which performs a specific task is called a ____________ server.,Dedicated,Database,Network,Web,A,1
+The total diameter of LAN is not more than ____________.,100 m,500 m,5 km,500 km,C,1
+"After creating the query, we need to run the query by clicking in the ____________ button.",Run,Execute,Result,Any of these,A,1
+____________ is a protocol used to send e-mail messages over the internet.,HTTPS,TCP/IP,POP3,SMTP,D,1
+Which of these terms describe a computer that is connected to a network?,Node,Unit,Device,Attachment,A,1
+____________  refers to the geometric arrangement of computers or nodes in a network.,HTTPS,Topology,TCP/IP,SMTP,B,1

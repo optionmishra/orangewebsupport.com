@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following statements forces the next iteration of the loop to take place? ,if…then  ,if,if…else  ,if…elif…else   ,B,1
+"In the if…elif…else structure, there can be ____________ elif statement(s) and____________ else statement(s). ","One, One  ","One, Any number  ","Any number, One  ","Any number, Any number   ",C,1
+The ____________ statement is a decision making statement in Python. ,continue,break ,if…else  ,input( )   ,C,1
+The ____________ function automatically converts the provided items into string even if we provide a numeric value or an expression. ,input( )  ,if( )  ,exit ,print( )   ,D,1
+____________ is/are subset(s) of Artificial Intelligence. ,Machine Learning  ,Deep Learning  ,Both A and B,None of these,A,1
+____________ was used for automated logistics planning and scheduling for transportation in war. ,DART,NASA,IBM,None of these   ,A,1
+The assertion that machines could act as if they were intelligent is called ____________ AI Hypothesis. ,Weak,Strong,Both A and B,None of these   ,B,1
+____________ are widely used in manufacturing industries such as automotive. ,Industrial robots  ,Emotional robots  ,Science robots  ,Androids,A,1
+The term mechatronics was coined by ____________ . ,Karel Kapek  ,Isaac Asimov  ,Tetsuro Mori  ,None of these   ,B,1
+A human like machine that can do automated tasks is called a ____________ . ,Transformer,Mechatronic ,Robot ,Emotion sensor   ,C,1

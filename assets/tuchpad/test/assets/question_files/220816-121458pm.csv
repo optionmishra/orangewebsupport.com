@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+"Norton, AVG and McAfee are some popularly used ____________.",Firewall,Antivirus,Virus,Malware,B,1
+Which of these is not a feature of Python language?,It is an interpreter based language,It has an integrated development environment,It is a free and open source software,It is not case sensitive,D,1
+Which of the following symbols is used to write comments in Python?,=,#,$,=,D,1
+Norton is a/an ____________.,System Software,Operating System,System Software,All of these,B,1
+Python was developed in 1991 by ____________.,Guido Van Rossum,Mitchel Resnick,Donglas Engelbrat,None of these,A,1
+Which of the following variable is invalid?,Neha?Bhatia,Priya $pay,_Usha123,num,C,1
+____________ is a type of malware.,Encryption,Trojan Horse,AVG,None of these,C,1
+Python has ____________ standard data types.,Two,Four,Six,Eight,B,1
+____________ a virus is the term used for cleaning a computer.,Cleaning,Scanning,Antivirus,Eradicating,D,1
+____________ is an invalid variable name.,123vicky,vicky$,vicky,�vicky�,D,1

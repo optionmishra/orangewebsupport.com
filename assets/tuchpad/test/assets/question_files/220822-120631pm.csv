@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+All HTML tags are enclosed in ____________ .,<> , ?!,##,All of these,A,1
+Which program do you need to preview an HTML document?,Text editor,Web browser,Both A and B,None of these,B,1
+"____________ tag enables you to apply the style on a single character, word or group of words.",<CENTER>,<HR>,<B>,All of these,C,1
+Which of the following tags allows the user to insert a table in a web page?,<IMG>,<A>,<TABLE>,None of these,C,1
+Which attribute of the <TABLE> tag gives the space between the adjacent cells?,CELLSPACING,CELLPADDING,ROWSPAN,All of these,A,1
+A numbered list can be defined using ____________ tag.,<UL>,<LI>,<OL>,None of these,C,1
+ Which of the following tags is used to create list item?,<LI>,<UL>,<LISTITEM>,All of these,A,1
+ Which of the following attributes is not used with the <IMG> tag?,SRC,FRAME,HEIGHT,None of these,B,1
+" It is a highlighted text or image, which when clicked takes to another web page.",Anchor,Tag,Hyperlink,All of these,C,1
+Which of the following attributes of the <MARQEE> tag is used to specify the speed of the moving text or image?,DIRECTION,BEHAVIOUR,SCROLLAMOUNT,None of these,C,1

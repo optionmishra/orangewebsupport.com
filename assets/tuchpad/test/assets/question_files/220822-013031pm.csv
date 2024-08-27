@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+"In which group of the Create tab, the Query Design command present? ",Queries,Tables,Templates,All of these,A,1
+What is an association between two tables on the basis of a common field is called? ,Structure,Relationship,Binding,None of these,B,1
+The feature in MS Access which allows us to retrieve data from a table is called ____________ . ,Primary Key ,Foreign Key ,Select Query   ,All of these,C,1
+The ____________ parameter displays the data in either descending or ascending order during the run time in the query window. ,Field,Sort,Or,None of these,B,1
+Which of the following is not a view of a form? ,Design View ,Form View ,Grid View   ,All of these,C,1
+____________ view is used to adjust the design of your form. ,Form ,Layout ,Design,None of these,C,1
+Which of the following is not a type of form? ,Split Form ,Datasheet,Modal Dialog   ,All of these,C,1
+Which of the following bar is used to scroll between the records? ,Navigation,Tool ,Formatting,None of these,A,1
+"Which section of the report contains logo, title of the report or date and time? ",Report Header ,Page Header  ,Detail ,All of these,A,1
+Which section of the report shows the final result of the report? ,Page Footer ,Report Footer ,None,None of these,B,1

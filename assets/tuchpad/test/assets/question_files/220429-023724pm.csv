@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of these is the shortcut key to cut data from a cell?,Ctrl + X,Ctrl + C,Ctrl + V,Ctrl + D,A,1
+The Format option in the Cells group is present under which tab?,Insert,Design,Home,Data,C,1
+Which of these displays the name of the workbook?,Ribbon,Title Bar,Name box,None,B,1
+What is the colour code for Sensing blocks?,Light-blue,Purple,Orange,Blue,A,1
+A variable that is used and modified by all sprites is called _______________.,Local,Global,Temperary,None,B,1
+"In which category, Answer block is present?",Variables,Sensing,Motion,None,B,1
+Which block gives an answer when asked a question?,Sensing Block,Looks Block,Sound Block,Control Block,A,1
+Which feature of Excel allows us to quickly fill cells with repetitive or sequential data?,Copying Data,Autofill,Pasting Data,None,B,1
+A selected group of cells is called _____________________ .,Column,Data,Range,table,C,1
+The short key to delete a row or column is ___________________ .,Ctrl+Z,Ctrl+D,Ctrl+ -,Ctrl+Y,C,1

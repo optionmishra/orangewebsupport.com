@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+What is the intersection of a row and column called? ,Row ,Column,Cell ,Deleted cell  ,C,1
+What are the vertical divisions called? ,Rows ,Columns,Cells,Main cell    ,B,1
+A cell that appears highlighted with dark black border is called ____________ .,Active cell ,Deleted cell  ,Main cell    ,None of these,A,1
+What is a collection of worksheets called? ,Workbook ,Vertical,Cel,All of these,A,1
+You can specify a column width of 0 to ____________ . ,255,256,258,259,A,1
+"If we add an equal sign in the beginning of the data, MS Excel considers it as ____________ . ",Text,Number ,Formula ,None if ,C,1
+Which feature automatically fills a series of data in your worksheet? ,AutoFill,Cell Fill ,Wrap Text   ,All of these,A,1
+Which one of the following cell references can be included in relative reference? ,$A$4 ,A$1   ,$D6   ,None of these,B,1
+Which of the following functions is used to calculate the average of a range of values? ,Average,SUM,AVG,All of these,A,1
+What is the cell address in a formula called? ,Range,Cell reference  ,Mixed reference   ,None of these,B,1

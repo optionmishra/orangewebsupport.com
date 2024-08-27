@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following is not an area of application of AI? ,Expert system ,Natural Language Processing ,3D Printing ,Robotics ,C,1
+What do while loop do? ,Repeat a chunk of code a given number of times ,Repeat a chunk of code until a condition is true ,Repeat a chunk of code until a condition is false,Repeat a chunk of code indefinitely ,B,1
+The app ____________ uses the GPS location of the smartphone and the camera to collect information about the user’s surroundings.,Star Walk ,Layar ,Mimo,Compass ,B,1
+Which of the following is a looping statement in Python? ,for statement ,while statement ,Both i & ii     ,break statement,C,1
+The camera in the device ____________ recognizes and tracks the users hand gestures with the help of computer-vision techniques. ,SixthSense,Google Glass ,Oculus Rift ,Mimo,A,1
+Which of the following statements allow to repeat a task for a fixed number of times? ,for statement ,while statement ,if…else statement ,. continue statement ,A,1
+____________ is not a type of 3D Printing. ,Indirect 3D printing ,Direct 3D printing ,Binder 3D printing,Fused Deposition Modeling ,A,1
+Which of the following functions is an in-built function in Python? ,print,statement,multiplication,addition,A,1
+The system of connected computing devices creating a virtual network is known as ____________. ,VR,IoT ,RPA,AR,B,1
+Which of the following statements terminates the execution of the loop? ,if,for,if....break ,Continue,C,1

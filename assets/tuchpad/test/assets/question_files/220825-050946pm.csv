@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following is not a category of HTML tags?,Data tags,Container tags,Both A & B,Empty tags,A,1
+Which of the following is used to define the style for a single HTML page?,Inline CSS,Internal CSS,External CSS,None of these,A,1
+Which part of the style sheet specifies the formatting to the selector?,Selector,Declaration,Tags,Bands,A,1
+Which CSS property specifies the font to be used?,Color,Font-family,Font-size,Font-margin,B,1
+What can be changed using the font properties?,Font size,Font colour,Font style,All of these,D,1
+Which of the following property is used to underline the text on web page?,Text-transformation,Text-decoration,Text-color,All of these,B,1
+Which of the following property is used to change the color of the text?,Color,Decoration,Text-color,Style,A,1
+Which of the following is used for instant messaging?,Facebook Messenger,Google Search Engine,Skype,All of these,A,1
+Using which medium can we distribute recorded audio information over the Internet?,Podcast,Blog,E-commerce,None of these,A,1
+Which of the following is used to search any kind of information on the Internet?,Video conferencing,Search engine,Gmail,Internet banking,B,1

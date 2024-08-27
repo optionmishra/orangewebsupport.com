@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+The attribute of the <TABLE> tag that gives the space between the adjacent cells. ,CELLSPACING,CELLPADDING,ROWSPAN,COLSPAN,A,1
+A numbered list can be defined using tag. ,<UL>  ,<LI>  ,<OL>  ,None of these   ,B,1
+Type and Start are attributes of ____________ tag. ,<OL>  ,<LI>  ,<UL>  ,<A>   ,A,1
+____________ is not an attribute of <TD> tag. ,Align,Width,Rowspan ,Cellpadding,D,1
+A ____________ represents data in the form of rows and columns. ,Frame ,Table  ,List,Link,B,1
+Behaviour = “____________” will make the object move from the start to the end and then bounce back from the end to the start. ,SLIDE,SCROLL,ALTERNATE,MARQUEE,A,1
+Hyperlink text is generally seen in ____________ colour.,Blue,Green,Red,Grey,A,1
+The ____________ tag divides the window into horizontal frames by using ROWS attribute. ,<FRAME>  ,<FRAMESET>  ,<A>  ,<TABLE>   ,B,1
+____________ attribute is not used with the <IMG> tag. ,SRC,FRAME,HEIGHT ,All of these   ,B,1
+The ____________ attribute of the <MARQUEE> tag is used to set the direction in which the object will move. ,BEHAVIOUR ,ALIGN,SCROLLAMOUNT,DIRECTION,D,1

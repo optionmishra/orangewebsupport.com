@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following fields is not available while writing a new email in Gmail?,To,CC,Domain name   ,None of these   ,C,1
+E-mail can be defined as the process of exchanging ____________ electronically. ,Hardware,Instructions   ,Messages,Information,C,1
+"To send and receive e-mail, the user must have an  ____________ account. ",E-mail,Gmail,Facebook,None of these   ,A,1
+A Web browser is a software application designed to find ____________ documents on the Web. ,Hypertext ,URL ,E-mail,None of these   ,A,1
+Which of the following is not a malware program? ,Rootkit ,Ransomware ,Backdoor,SmartDog,D,1
+Which of the following is not an antivirus software? ,Norton,AVG,McAfee,Worm,D,1
+Which of these is not an online backup service? ,Google Drive  ,Carbonite ,Dropbox,None of these,B,1
+"Logical OR operator returns ____________, if both operands are false.",TRUE,FALSE,Both A and B,None of these,B,1
+The statement using AND operator results true if ____________ . ,Both operands are true  ,Both operands are false   ,Either of the operands is true  ,Neither of the operands is true   ,A,1
+Which one of the following has the highest precedence in a logical expression? ,Addition ,Exponential,Multiplication ,Parentheses,D,1

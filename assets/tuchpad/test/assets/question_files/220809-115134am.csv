@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of these attributes is used in internal linking?,NAME,HREF,Both i and ii,None of these,A,1
+____________ is a unique field in a table.,Primary Key,Secondary key,Name field,None of these,A,1
+"____________ is a highlighted text or image, which when clicked takes to another web page.",Anchor,Hyperlink,Tag,Table,B,1
+A database object used to display data from a table in a formatted way is called____________.,Query,Report,Form,Wizard,C,1
+Arranging the records in a particular order is called ____________.,Query,Wrap Text,Report,Table,B,1
+Which of these attributes is used to restrict the user to resize the frame on the web page?,NOFRAME,NOSIZE,NORESIZE,RESIZE,C,1
+An association between two tables on the basis of a common field is called____________.,Structure,Binding,Relationship,Printing,C,1
+____________ data type automatically stores a sequential number for every record in a table.,Serial,Autofill,AutoNumber,Time/date,C,1
+A table can be created by using ____________.,Design view,Templates,Datasheet view,All of these,A,1
+The ____________ parameter displays the data in either descending or ascending order during the run time in the query window.,Field,Or,Sort,Criteria,C,1

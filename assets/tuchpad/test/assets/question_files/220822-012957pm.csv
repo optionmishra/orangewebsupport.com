@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+"In which of the following views, records are not visible? ",Datasheet ,Template,Design,All of these,C,1
+Which of the following data types is used to store currency values? ,Money,Currency,Memo,None of these,B,1
+Which of the following is not a relational database? ,MySQL,MS Access ,MS Excel   ,All of these,C,1
+"Which option is present on the left side of the Access window that display the names of the objects used in the database such as Table, Query and Form? ",Navigation pane ,Work Area ,Ribbon ,None of these,A,1
+Which of the following is one of the ways to create a table in MS Access,Design view ,Form view ,Table view   ,All of these,A,1
+"To move between columns and insert new fields at the end, press the ____________ key. ",Shift ,Ctrl,Tab,None of these,C,1
+Which of the following options is used to unfreeze columns? ,Unfreeze All Fields ,Unfreeze Fields ,Unfreeze,All of these,A,1
+"In which view of the table, can we add records? ",Datasheet view ,Design view ,Form view   ,None of these,A,1
+Which of the following group of the External Data tab is used to export data from MS Access table? ,Sort & Filter ,Import & Link  ,Export,All of these,C,1
+Which of the following command is used to perform calculation in MS Access? ,Totals,Filter,Sort ,None of these,A,1

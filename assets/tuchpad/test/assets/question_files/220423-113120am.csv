@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+What do while loop do? ,Repeat a chunk of code a given number of times ,Repeat a chunk of code until a condition is true ,Repeat a chunk of code until a condition is false ,Repeat a chunk of code indefinitely ,B,1
+What is the input given to the functions referred to as? ,Return Value ,Name,Arguments,None of these ,C,1
+Which key combination is used to stop the execution of a program in Python?,Ctrl + A,Ctrl + C,Ctrl + B,Ctrl + Z,B,1
+Which user-defined function takes parameters and returns output? ,type1,type2 ,type3,None of these ,B,1
+Which of the following statements allow to repeat a task for a fixed number of times? ,for statement ,while statement ,if…else statement ,continue statement ,A,1
+Which of the following technology will be used to track player movements in tennis? ,NLP,Machine Learning ,Computer Vision ,None of these ,B,1
+Which of the following statements terminates the execution of the loop? ,if,for,break,continue,C,1
+Which of the following have the tendency to get bored while performing repetitive tasks? ,Humans,AI System ,Both (a) & (b) ,None of these,A,1
+Which type of function is append( )? ,Built-in ,User-defined ,Not a valid function ,None of these ,A,1
+Which of the following is a looping statement in Python? ,for statement ,continue statement ,if statement ,break statement ,A,1

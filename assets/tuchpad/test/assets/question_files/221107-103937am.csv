@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+A PowerPoint presentation is made up of a series of .............................. .,animation,clipart,slides,wordart,C,1
+Which of the following is a library of ready-made pictures and graphics?,ClipArt,WordArt,Animation,None of these,A,1
+".............................. is the arrangement of text, graphics, images, etc.",Animation,Slide Layout,ClipArt,WordArt,B,1
+Which block is used to hide the sprite from the stage?,Show,Escape,Hide,script,C,1
+Which of these are used to hold values?,Blocks,Variables,Operators,Sound,B,1
+Which operator is used to compare two variables?,Mathematical,Logical,Relational,None of these,C,1
+"In Scratch, the variable can be created using ......................... blocks.",Motion,Sound,Looks,Sensing,D,1
+�.............  Blocks are used to do arithmetic and logical calculations.,Sensing,Operators,Motion,Sound,B,1
+The �..................  block is used to run a set of instructions continuously until stopped.,Forever,Repeat,Control,Motion,A,1
+"When we save a word in a variable, it is called ......................... variable.",data,string,conditional,None of these,B,1

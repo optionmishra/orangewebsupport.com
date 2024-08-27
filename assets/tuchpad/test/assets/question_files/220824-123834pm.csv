@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+An Excel file is often called ____________. ,Workbook ,Worksheet ,Spreadsheet,Table,C,1
+Cells arranged horizontally across the screen are called ____________. ,Rows ,Columns ,Grids ,Cells,A,1
+A group of cells which are adjacent to each other are called a ____________. ,Worksheet ,Active cell,Cell range,New Cell,C,1
+An active cell has a ____________ border around it. ,Green ,Blue ,Black ,Red,C,1
+What is the shortcut key to edit a cell?  ,Esc key  ,Enter key  ,F2 key,Delete key,C,1
+The keyboard shortcut to copy and paste cell contents is:,Ctrl + Z & Ctrl + V ,Ctrl + C & Shift + V ,Ctrl + C & Ctrl + V,Ctrl + C & Ctrl + X,C,1
+Which of these you cannot fill using AutoFill feature in Excel?  ,Numbers ,Days ,Heights of your classmates,None of these,C,1
+Excel has built-in ____________. ,Formulas  ,Images ,Videos ,None of these,A,1
+Which key combination will move the active cell one row up? ,Shift + Enter ,Shift + Tab ,Shift + Ctrl ,Shift + F2,A,1
+"To run a script, you click on _______________ button.",Previous ,Go,Browse ,Play,B,1

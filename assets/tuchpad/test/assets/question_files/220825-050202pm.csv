@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which feature of Excel allows us to quickly fill cells with repetitive or sequential data?,Copying Data,Autofill,Pasting Data,None of these,B,1
+The Format option in the Cells group is present under which tab?,Insert,Design,Home,None of these,C,1
+Which of these displays the name of the workbook?,Ribbon,Title Bar,Name Box,None of these,B,1
+We can use this to fill cells with repetitive or sequential data.,Formula Bar,Fill Handle,Insert Tab,None of these,B,1
+Which blocks are used to detect different sprites and elements of a project including the edge of the stage?,Variables,Events,Sensing,None of these,C,1
+Which block gives an answer when asked a question?,Sensing Block,Looks Block,Sound Block,None of these,A,1
+What is the colour code for Sensing blocks?,Light-blue,Purple,Orange,None of these,A,1
+"In which category, Answer block is present?",Variables,Sensing,Motion,None of these,B,1
+Which of these is the shortcut key to cut data from a cell?,Ctrl + X  ,Ctrl + C,Ctrl + V,Ctrl + B,A,1
+What the keyboard shortcut to delete a row?,Ctrl + =,Ctrl + -,Ctrl - +,None of these,B,1

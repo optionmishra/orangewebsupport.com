@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+A language translator is a software that converts a High-Level Language (HLL) program into a ____________ language. ,Symbolic,Human,Machine,English,C,1
+"In machine language, ‘0’ and ‘1’ are ____________ .  ",Binary digits  ,Bytes,Numbers,Digits,A,1
+The language understood by the computer is ____________ . ,Assembly language  ,High-level language   ,Machine language  ,4GL,C,1
+A computer programmer draws a ____________ before writing a computer program.  ,Chart,Scenery,Flowchart,Syntax,C,1
+A variable that contains a whole number is called ____________ . ,String,Integer ,Boolean,Real Number   ,B,1
+Which of the following is an operator in BASIC-256? ,$,!,#,^,D,1
+Which of the following are used to hold values? ,Blocks,Operators,Variables,Sprites,C,1
+Which types of operators are used to compare two variables?  ,Mathematical,Relational,Logical,Assignment,B,1
+Which quality do people with intrapersonal intelligence possess? ,Can recognise their strengths   ,Nature lover  ,Both A and B,None of these,A,1
+Which AI model approach uses a series of if-else statements that helps a computer to take decisions,Learning-based approach   ,Rule-based approach  ,Machine learning  ,None of these,B,1

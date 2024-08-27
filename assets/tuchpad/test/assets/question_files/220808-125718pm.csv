@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following statements would make the controller go back to the label: Start:,Goto Start,Goto: Start,Goto (Start),Goto [Start],A,1
+Which of the following statements should be at the end of every conditional statements?,EndIf,EndFor,EndWhile,EndSub,A,1
+Which key is used to run a program in Small Basic?,Enter,F5,F10,F12,B,1
+A variable that contains a whole number is called ____________. ,String,Boolean,Integer,Real Number,C,1
+"To multiply two values in Small Basic, which operator should you use?  ",**,*,x,X,B,1
+Which of the following functions returns the largest integer that is less than or equal to the argument?,Math.Abs(number),Math.Ceiling(number),Math.Floor(number),Math.SquareRoot(number),C,1
+Which of the following are the three parts of a conditional statement?  ,"IF, ELSEIF & ELSE","IF, FOR & WHILE","FOR, IF, ELSE","IF, FOR, ELSE",A,1
+Which core programming principle is concerned with making decisions?,Sequence,Selection,Iteration,Choosing,B,1
+What must the condition in an if statement evaluate to?  ,True or False,1 or 0,A number,It can be anything,A,1
+The shortcut key to open a new text window is ________________.,Ctrl+W,Ctrl+M,Ctrl+T,Ctrl+N,D,1

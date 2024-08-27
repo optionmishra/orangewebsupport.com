@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which one of the following cell references can be included in relative reference?  ,A3,$A$4  ,A$1  ,$D6     ,A,1
+The ____________ function returns the square root of the given number.,MOD( )  ,INT( )  ,POWER( )  ,SQRT( )    ,D,1
+The ____________ Tool is used to draw freehand lines and shapes.  ,Pen,Pencil,Brush  ,Line,B,1
+The extension of Animate document is ____________.  ,fla,flv,doc,xlsx ,A,1
+The cell address in the formula is known as ____________.  ,Range ,Cell reference  ,Mixed reference  ,None of these     ,B,1
+What is the default width and height of the Stage?,550 x 400,400 x 500,600 x 450,350 x 450,A,1
+Which of the following is the main work are in Animate?,Tools Panel ,Timeline,Stage,None of these,C,1
+A group of selected cells is called ____________.  ,Selection,Combination,Cell range  ,None of these     ,C,1
+The Timeline is a panel at the ____________ of the stage.,left,right,top,bottom ,D,1
+Which of the following functions is used to calculate the average of a range of values?  ,SUM,AVG,AVERAGE,None of these     ,D,1

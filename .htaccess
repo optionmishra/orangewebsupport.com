@@ -1,0 +1,14 @@
+#RewriteEngine on
+#Options -Indexes
+#RewriteCond $1 !^(index\.php|public|assets|\.txt) 
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?$1
+
+
+#Header set Access-Control-Allow-Origin 'https://www.touchpadwebsupport.com'
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

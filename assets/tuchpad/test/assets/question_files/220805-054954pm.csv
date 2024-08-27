@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following is not a conditional statement in BASIC-256? ,IF-THEN  ,IF-THEN-ELSE  ,FOR-NEXT   ,None of these,C,1
+Which loop statement do we use when we don't know the loop count? ,While,For,Both A and B,All of these,A,1
+What does a loop do? ,Repeats a section  ,Sets a variable  ,Print Hello   ,None of these,A,1
+"In the given statement, what is i? FOR i = 1 TO 100 ",Branch ,Counter variable  ,Condition,None of these,B,1
+Which statement is used to end the WHILE loop? ,END WHILE  ,WHILE,END-WHILE   ,All of these,A,1
+____________ crime is a criminal activity in which computers are used to do crime. ,Cyber ,Organised,Property ,None of these,A,1
+Which of the following is not a cloud storage? ,Google Drive   ,OneDrive ,Skype,Dropbox,C,1
+What is the technique of watching the person while talking to him is called? ,Video conferencing ,E-mail  ,Blog,None of these,A,1
+Which of these is not a communication service of Internet? ,Chat ,Blog,E-mail   ,All of these,B,1
+____________ is a technology which gives calling facility over the Internet.,Video conferencing ,E-mail  ,VoIP,All of these,C,1

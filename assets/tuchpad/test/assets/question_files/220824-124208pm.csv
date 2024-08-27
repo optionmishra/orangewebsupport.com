@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+A flowchart is a graphical representation of a/an ____________.  ,Program,Algorithm,Symbol,None of these,B,1
+The language understood by the computer is ____________,Assembly language ,Machine language  ,High-level language ,4GL,B,1
+____________ is the third generation language.  ,High-level language ,Machine language  ,Assembly language ,Low-level language   ,A,1
+Which of the following language translators translates and executes one statement at a time?  ,Compiler,Interpreter   ,Assembler ,None of these   ,B,1
+Which key is used to run a program in Small Basic?  ,Enter,F5,F10,F12,B,1
+An ____________ is a program used to translate assembly language into machine language.,Compiler,Interpreter   ,Assembler ,None of these   ,C,1
+Which of the following functions returns the largest integer that is less than or equal to the argument?  ,Math.Abs(number) ,Math.Ceiling(number) ,Math.Floor(number) ,Math.SquareRoot(number)   ,C,1
+When was Internet started?  ,1969,1970,1971,1972,A,1
+Every web page has a Unique address known as ____________.  ,IRL,ARL,UWL,URL,D,1
+A ____________ helps to jump from one link to  another.,Connection,Link,Hyperlink,Internet,C,1

@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following statements terminates the execution of the loop? ,if,for,break,continue,C,1
+Which of the following functions is an in-built function in Python? ,print()  ,statement()  ,multiplication()  ,addition()   ,A,1
+Which of the following is a looping statement in Python? ,for statement  ,while statement  ,Both A and B  ,break statement   ,C,1
+What will be the output of the following code?   if(True):print(“Hello”)   else:      print(“Hi”) ,Hello ,Hello Hi   ,Hi,Nothing will print   ,A,1
+Which of the following conditional statements is used to test multiple conditions?,if  ,if…elif…else   ,if…else   ,All of these   ,B,1
+Which of the following is a subset of AI that includes abstruse statistical techniques which enables machines to improve at tasks with experience? ,Machine Learning  ,Deep Learning  ,Mind Learning  ,Ethical Learning   ,A,1
+Which of these are widely used in manufacturing industries such as automotive? ,Industrial robots  ,Service robots  ,Science robots  ,Androids ,A,1
+The concept of AI was first propounded in ____________ . ,1950,1966,1956,1980,A,1
+The earliest successful Artificial Intelligence program was written in ____________ by Christopher Strachey. ,1952,1951,1961,1971,B,1
+The word robot comes from the Slavic word ____________ . ,Robota  ,Machine,Robotics  ,None of these,A,1

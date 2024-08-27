@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following attributes is not used with the <IMG> tag?,SRC,FRAME,HEIGHT,BORDER,B,1
+"It is a highlighted text or image, which when clicked takes to another web page.",Anchor,Tag,Hyperlink,Table,C,1
+Which of the following attributes of the <MARQEE> tag is used to specify the speed of the moving text or image? ,DIRECTION,BEHAVIOUR,SCROLLAMOUNT,None of these,C,1
+Which of these attributes is used in internal linking?,NAME,HREF,Both a and b,None of these,C,1
+Which of these attributes is used to restrict the user to resize the frame on the web page?,NOFRAME,NORESIZE,NOSIZE,RESIZE,B,1
+"Which attribute specifies the alternate text to be displayed in the web browser, if the provided image is not found?  ",Digital,Hybrid,Analog,None of these,B,1
+The ____________ tag allows the user to insert a table in a web page.,<IMG>,<A>,<TABLE>,<LI>,C,1
+The ____________ attribute of the <TABLE> tag gives the space between the adjacent cells.,CELLSPACING,CELLPADDING,ROWSPAN,COLSPAN,A,1
+A numbered list can be created by using the ____________ tag.  ,<UL>,<LI>,<OL>,None of these,C,1
+The ____________ is not an attribute of the <TABLE> tag?,BORDER,BACKGROUND,BORDERCOLOR,TYPE,D,1

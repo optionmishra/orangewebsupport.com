@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+A computer network that spans across a city can be called a ____________ . ,LAN,WAN,MAN,CAN,C,1
+____________ can convert the digital data into analog signal and vice versa. ,Hub,Modem,Router,Switch,B,1
+A/an ____________ address is an unique identification number assigned to a computer connected to a network. ,IP,Web,Permanent,Local,A,1
+____________ is a group of related data organised in columns and rows in a database. ,Query,Report,Form,Table,D,1
+Which of the following keys is used to specify a unique field in a table? ,Primary key,Secondary key,Composite key,None of these,A,1
+Which of the following options is used to create a table? ,Table Design view  ,Table Data view   ,Borth A and B,None of these,A,1
+Which of the following is not a data type in LibreOffice Base? ,Number,OLE,Text,Yes/No,B,1
+"Which of the following is an organised way of creating, editing and displaying data from the table? ",Report,Form,Query,Table,B,1
+Which feature of  LibreOffice Base allows us to retrieve data from a table?,Query,Report,Form,Table,A,1
+Which of the following is used to display the data in either descending or ascending order during the runtime in the query window? ,Field,Or,Sort,Criterion,C,1

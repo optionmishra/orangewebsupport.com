@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+____________ option is used to cut selected part of an image. ,Cut/Paste  ,Crop,Copy/Paste   ,Zoom,B,1
+"To get the mirror image of a drawing, we use ____________ command.  ",Skew ,Zoom,Flip ,Resize,C,1
+____________ command gives a closer and bigger look of an image. ,Crop,Skew ,Zoom,Flip,C,1
+"By using ____________ command, the image gets stretched from one end while the other end remains fixed. ",Resize,Skew ,Rotate,Zoom,A,1
+____________ Shape tool is used to draw lines in any direction.  ,Line,Pencil,Polygon,Rectangle,C,1
+"In ____________ window, you give commands and control the working of the turtle.  ",Main,Commander,Side,Exit,B,1
+LOGO is derived from the ____________ word Logos which means thought. ,Greek,Latin,Egyptian,European,A,1
+The blank space in the middle of the window is ____________ .  ,Main screen,Commander Window,Status bar,Turtle,A,1
+The ____________ button is clicked to immediately stop the command from being executed.  ,Reset ,Execute,Halt,Stop,C,1
+"To exit LOGO, type ____________ in the Input Box.  ",Quit,Bye,Exit,Close,B,1

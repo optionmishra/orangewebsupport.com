@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+The computer which performs a specific task is called a ____________ server.  ,Dedicated ,Database,Network,Web,A,1
+The total diameter of LAN is not more than ____________ .  ,100 m  ,500 m  ,5 km  ,500 km   ,C,1
+Bluetooth 5.0 technology provides data transfer speed upto ____________ . ,1 Kbps  ,1 Mbps  ,2 Mbps  , 4 Tbps   ,C,1
+A table can be created by using ____________ . ,Design view  ,Datasheet view  ,Templates ,All of these   ,D,1
+____________ stores a sequential number for every record in a table. ,Serial,Auto Number  ,Autofill ,Time/date   ,C,1
+____________ rule defines a Relational Database Management System. ,Mark’s,Codd’s,Bill’s,Babbage’s,B,1
+The Close Database option is present under ____________ tab. ,File,Home,Create  ,Table,A,1
+"____________ is an organized way of creating, editing and displaying data from the table. ",Report ,Query,Form,Table,B,1
+____________ displays the data in either descending or ascending order during the run time in the query window. ,Field,Sort,Or,Criteria,C,1
+____________ are the links that associate a field in one table with the same field in another table. ,Structures,Relationships,Binding,Printing,C,1

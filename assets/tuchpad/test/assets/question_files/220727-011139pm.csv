@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+The ____________ displays the slides as thumbnails.  ,Status bar,Slide pane  ,Ribbon,File tab,C,1
+A title slide displays the text ____________ .  ,Outline pane,Slide pane  ,Work area,Status bar,B,1
+____________ is located at the top of the MS PowerPoint window.  ,Placeholder,Size,Font,Ribbon,A,1
+Which of these is a presentation making software?,MS PowerPoint,Paint,MS Word,Scratch,A,1
+"To start MS PowerPoint, click on the Start button on the ............................. .  ",Title bar,Status bar,Task bar,Slide pane  ,C,1
+____________ command is used to lift up the turtle’s pen.  ,PD,CU,PU,PE,C,1
+The command used to draw a circle is ____________ .  ,REPEAT,PRINT,CIRCLE,FORWARD,A,1
+The command used to turn the turtle in right direction is ____________ .  ,FD,LT,RT,PU,C,1
+A polygon with five sides is called ____________ .  ,Triangle ,Pentagon,Heptagon,Nonagon,B,1
+The command used to draw a decagon is ____________ .  ,REPEAT 6 [FD 70 RT 60]  ,REPEAT 8 [FD 70 RT 45]  ,REPEAT 10 [FD 70 RT 36]    ,None of these,C,1

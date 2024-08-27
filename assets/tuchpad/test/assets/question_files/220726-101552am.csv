@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Total number of rows in a worksheet are ____________ .  ,1048576,148576,16384,None of these   ,A,1
+The currently selected cell that appears highlighted with dark black border is called ____________ . ,Active cell  ,Selected Cell  ,Main Cell  ,Name Box   ,A,1
+Which option of Format menu allows you to add borders to the selected cells? ,Borders,Cells   ,Colors,Cell Border   ,B,1
+Vertical divisions are called ____________ . ,Rows,Columns,Cells,Sheets,B,1
+Format menu includes formatting elements such as ____________ .  ,Text wrap,Column width,Merging cells,All of the above,C,1
+LibreOffice Calc follows ____________ rule for doing mathematical calculations.  ,BEDMOS,BODMAS,BODMOS,BEDMAS,D,1
+Which one of these function converts the text string into lower case? ,LOWER(Text)  ,UPPER(Text)  ,Both A and B,RIGHT(Text)   ,A,1
+Which one of these function returns the current date of the computer? ,YEAR(TODAY())  ,TODAY()  ,DAY(TODAY())  ,None of these   ,B,1
+Which of the following components of the Tupi 2D has the color palette? ,Left sidebar,Bottom side bar,Right side bar,Exposure sheet,A,1
+Which of the following options is used to exit the Tupi 2D window? ,File -> Quit  ,File -> Close   ,File -> Exit   ,None of these   ,A,1

@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following fields is not available while writing a new email in Gmail? ,To,CC,Subject,New Message,D,1
+E-mail can be defined as the process of exchanging ____________ electronically. ,Hardware,Instructions   ,Messages,Information,C,1
+An email address has user name and ____________ . ,Company name  ,Second name   ,Domain name   ,None of these,C,1
+You can backup your data into ____________ . ,UPS ,Mouse,External Hard Drive,None of these,C,1
+Which of the following is not an antivirus software? ,Norton,AVG,McAfee,Worm,D,1
+Which of these is not an online backup service? ,Google Drive  ,Carbonite ,Dropbox,None of these,B,1
+"Which one of these tags enables you to apply the style on a single character, word or group of words? ","""<CENTER> ""","""<HR>""  ","<FONT> "" ","""<B> ""  ",D,1
+"The ____________ tag is used to change certain properties such as font size, face and colour of a block of text on a web page. ",<FONT>  ,<B>   ,<FACE>,<HR>,A,1
+Which attribute of the <TABLE> tag gives the space between the adjacent cells? ,CELLSPACING,ROWSPAN,CELLPADDING ,COLSPAN,A,1
+Which of the following attributes is used to set the display position of the text in a cell horizontally? ,ALIGN,VALIGN,ROWSPAN,COLSPAN,A,1

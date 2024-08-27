@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touchpad</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/home-style.css" />
+  </head>
+  <body>
+    <div
+      class="container main-wrapper d-flex flex-column justify-content-around"
+    >
+      <div class="row justify-content-center mt-3">
+        <img src="./img/orange-logo.svg" alt="" style="max-width: 180px" />
+        <h2 style="text-align: center">Orange Education's Websupport</h2>
+      </div>
+      <div class="card shadow p-4 home-card">
+        <div class="home">
+          <span><img src="./img/home.png" alt="" /></span>
+          <span
+            ><a href="">Return to <br />Main Site</a></span
+          >
+        </div>
+        <div class="row">
+          <div class="col-md-6 illustration">
+            <img src="./img/illustration.png" alt="" style="max-width: 300px" />
+            <div class="ill-2">
+              <a href="">Watch Tutorial</a>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex flex-column">
+            <div class="heading">
+              <p class="mt-2 mb-1">Welcome to</p>
+              <p style="font-size: 26px">One-Stop Platform</p>
+            </div>
+            <div class="email_pw">
+              <i class="email-icon"> <img src="./img/email.PNG" alt="" /></i>
+              <input
+                class="form-control"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Registered E-mail"
+              />
+              <i class="pw-icon"> <img src="./img/pwd.PNG" alt="" /></i>
+              <input
+                class="form-control"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="show_pw">
+              <input
+                type="checkbox"
+                name="show_pw"
+                id="show_pw"
+                onclick="showPwd()"
+              />
+              <label for="show_pw">Show Password</label>
+            </div>
+            <div class="d-flex align-items-center mt-2 mr-2">
+              <button class="btn btn-login rounded-pill" type="submit">
+                LOGIN >
+              </button>
+              <a
+                style="
+                  font-size: 0.8rem;
+                  width: 120px;
+                  text-align: end;
+                  color: #333;
+                "
+                href=""
+                >Forgot Password?</a
+              >
+            </div>
+            <div class="reg">
+              <div class="reg-line">
+                <a id="registrationBtn">New User ?</a>
+              </div>
+              <img src="./img/bot.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="row">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+          style="color: white"
+        >
+          <h1 style="font-size: 1.5rem">Empowering Computer Education</h1>
+          <p style="font-size: 12px">
+            Copyrights 2021 Orange Education Pvt. Ltd.
+          </p>
+        </div>
+        <img class="wa-icon" src="./img/whatsapp.png" alt="" />
+      </footer>
+    </div>
+    <!-- Trigger/Open The Modal -->
+    <!-- <button id="myBtn">Open Modal</button> -->
+
+    <!-- The Modal -->
+    <div id="registrationModal" class="registration-modal">
+      <!-- Modal content -->
+      <div class="registration-modal-content">
+        <div class="modal-header">
+          <h5>Select Your Role</h5>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body d-flex justify-content-around">
+          <button class="role-btn student-reg-btn">I am a<br />STUDENT</button>
+          <button class="role-btn teacher-reg-btn">I am a<br />TEACHER</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+What is the default value of PenWidth property in Graphics Window?,2,5,4,10,A,1
+Which of the following raises an event when a key is released on the keyboard?,GraphicsWindow.KeyUp,GraphicsWindow.MouseDown,GraphicsWindow.MouseMove,GraphicsWindow.MouseUp,D,1
+Which of the following command is used to display the Graphics Window?,GraphicsWindow.KeyUp,GraphicsWindow.MouseDown,"GraphicsWindow.DrawEllipse(x, y, width, height)",GraphicsWindow.Show(),C,1
+Which loop statement do we use when we don`t know the loop count?  ,While,For,Both a and b,None of these,A,1
+What does a loop do?  ,Repeats a section of code,Chooses a path to take,Sets a variable name,Print Hello,A,1
+"In the given statement, what is i? For i = 1 To 100",Branch,Counter,Condition,Property,B,1
+Which of the following is incorrect?  ,While i = 1 To 400,For i = 1 To 400,Both a and b,None of these,D,1
+"What will be the output of the following program? For i = 10 To 1 Step � 4 TextWindowWrite(i+ "" "") EndFor",1062,10 6 2,2610,10,B,1
+Which of the following methods draws an ellipse on the screen using the selected Pen?,"GraphicsWindow.DrawEllipse(x, y, width, height)","GraphicsWindow.DrawImage(imageName, x, y) ","GraphicsWindow.DrawLine(x1, y1, x2, y2)","GraphicsWindow.DrawRectangle(x, y, width, height)",A,1
+Which of the following properties gets or sets the Background color of the Graphics Window?,BackgroundColor,BrushColor,CanResize,FontBold,A,1

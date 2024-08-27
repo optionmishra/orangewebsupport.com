@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+____________ is called the father of artificial intelligence. ,Alan Turing,Thomas Knoll,Charles Babbage,Ada Lovelace,A,1
+The concept of AI was first propounded in ____________.,1950,1966,1956,1980,B,1
+____________ is/are subset(s) of Artificial Intelligence.,Machine Learning,Deep Learning,Both a and b,None of these,A,1
+____________ was used for automated logistics planning and scheduling for transportation in war.,DART,NASA,IBM,None of these,A,1
+Which of these is a jump statement?,int,break,float,None of these,B,1
+Which of these is not a conditional statement?,continue,if�else,if,if�elif�.else,A,1
+Which of the following statements forces the next iteration of the loop to take place?,break,if....else,continue,None of these,C,1
+The ____________ statement is the most basic conditional statement in Python.,if�then,if,if�else,if�elif�else,B,1
+The ____________ statement is a decision making statement in Python.,continue,break,if�else,input( ),C,1
+Which of the following statements allows to create a loop?,if�.else,float,break,for,D,1

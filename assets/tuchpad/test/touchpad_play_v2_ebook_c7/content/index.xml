@@ -1,0 +1,173 @@
+﻿<book chname="Atlas">
+	<chapter chname="It’s Me!" startpage="5"/>
+	<chapter chname="1. Parts of my body" startpage="7"/>
+	<chapter chname="2. My family" startpage="12"/>
+	<chapter chname="3. Food and water" startpage="17"/>
+	<chapter chname="4. The dresses we wear" startpage="22"/>
+	<chapter chname="5. My home" startpage="27"/>
+	<chapter chname="6. Safety saves" startpage="32"/>
+	<chapter chname="7. Health is wealth" startpage="37"/>
+	<chapter chname="8. My neighbourhood" startpage="42"/>
+	<chapter chname="9. Our helpers" startpage="48"/>
+	<chapter chname="10. Festivals are fun" startpage="52"/>
+	<chapter chname="11. Travelling time" startpage="58"/>
+	<chapter chname="12. Weather" startpage="63"/>
+	<chapter chname="13. So many animals" startpage="68"/>
+	<chapter chname="14. Plants–our green friends" startpage="74"/>	
+	<chapter chname="15. In the sky" startpage="79"/>
+	<chapter chname="16. Our Earth" startpage="84"/>
+	
+
+	<icons>	
+	
+	
+	<page pno="7">
+			<button btype="com.bqt::LoadAnimBtn" position="325|335" bsize="25|25" bname="ch_01_LS_01"/>	
+		</page>
+		
+		
+	<page pno="8">
+			<button btype="com.bqt::LoadAnimBtn" position="390|20" bsize="29|29" bname="ch_01_LS_02"/>
+		</page>
+		
+		
+	<page pno="9">
+			<button btype="com.bqt::LoadAnimBtn" position="332|570" bsize="25|25" bname="ch_01_LS_03"/>	
+		</page>
+
+
+	<page pno="11">
+			<button btype="com.bqt::LoadAnimBtn" position="208|580" bsize="25|25" bname="ch_01_LS_04"/>	
+		</page>
+	
+
+			
+	<page pno="13">
+			<button btype="com.bqt::LoadActBtn" position="495|450" bsize="29|29" bname="ch_01_act_01"/>
+		</page>
+			
+	<page pno="14">
+			<button btype="com.bqt::LoadActBtn" position="495|30" bsize="29|29" bname="ch_01_act_02"/>
+			<button btype="com.bqt::LoadActBtn" position="495|130" bsize="29|29" bname="ch_01_act_03"/>
+			<button btype="com.bqt::LoadActBtn" position="495|250" bsize="29|29" bname="ch_01_act_04"/>
+			`<button btype="com.bqt::LoadActBtn" position="495|350" bsize="29|29" bname="ch_01_act_05"/>
+		</page>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<page pno="15">	
+			<button btype="com.bqt::LoadAnimBtn" position="235|305" bsize="25|25" bname="ch_02_LS_01"/>
+		</page>
+
+		<page pno="16">	
+			<button btype="com.bqt::LoadAnimBtn" position="280|35" bsize="25|25" bname="ch_02_LS_02"/>
+			<button btype="com.bqt::LoadAnimBtn" position="320|500" bsize="25|25" bname="ch_02_LS_03"/>
+		</page>
+		
+		<page pno="18">	
+			<button btype="com.bqt::LoadAnimBtn" position="250|428" bsize="23|23" bname="ch_02_LS_04"/>
+		</page>
+		
+		<page pno="20">
+			<button btype="com.bqt::LoadActBtn" position="495|540" bsize="29|29" bname="ch_02_act_01"/>
+		</page>
+		
+		<page pno="21">
+			<button btype="com.bqt::LoadActBtn" position="495|150" bsize="29|29" bname="ch_02_act_02"/>
+			<button btype="com.bqt::LoadActBtn" position="495|330" bsize="29|29" bname="ch_02_act_03"/>
+			<button btype="com.bqt::LoadActBtn" position="495|480" bsize="29|29" bname="ch_02_act_04"/>
+		</page>
+		
+	  <page pno="22">
+			<button btype="com.bqt::LoadActBtn" position="495|30" bsize="29|29" bname="ch_02_act_05"/>
+		</page>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<page pno="24">
+			<button btype="com.bqt::LoadAnimBtn" position="240|560" bsize="25|25" bname="ch_03_LS_01"/>	
+		</page>	
+
+	<page pno="26">
+			<button btype="com.bqt::LoadAnimBtn" position="210|35" bsize="25|25" bname="ch_03_LS_02"/>	
+			<button btype="com.bqt::LoadAnimBtn" position="250|170" bsize="25|25" bname="ch_03_LS_03"/>	
+		</page>	
+		
+	<page pno="27">
+			<button btype="com.bqt::LoadAnimBtn" position="210|35" bsize="25|25" bname="ch_03_LS_04"/>	
+			<button btype="com.bqt::LoadAnimBtn" position="200|205" bsize="25|25" bname="ch_03_LS_05"/>	
+			<button btype="com.bqt::LoadAnimBtn" position="250|387" bsize="25|25" bname="ch_03_LS_06"/>	
+		</page>	
+		
+	<page pno="28">
+			<button btype="com.bqt::LoadAnimBtn" position="250|330" bsize="25|25" bname="ch_03_LS_07"/>	
+		</page>	
+
+	<page pno="29">
+			<button btype="com.bqt::LoadAnimBtn" position="240|308" bsize="25|25" bname="ch_03_LS_08"/>	
+		</page>	
+		
+	<page pno="31">
+			<button btype="com.bqt::LoadActBtn" position="495|545" bsize="29|29" bname="ch_03_act_01"/>
+		</page>
+
+	<page pno="32">
+			<button btype="com.bqt::LoadActBtn" position="495|130" bsize="29|29" bname="ch_03_act_02"/>
+			<button btype="com.bqt::LoadActBtn" position="495|250" bsize="29|29" bname="ch_03_act_03"/>
+			<button btype="com.bqt::LoadActBtn" position="495|380" bsize="29|29" bname="ch_03_act_04"/>
+			<button btype="com.bqt::LoadActBtn" position="495|500" bsize="29|29" bname="ch_03_act_05"/>
+		</page>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+	</icons>
+</book>

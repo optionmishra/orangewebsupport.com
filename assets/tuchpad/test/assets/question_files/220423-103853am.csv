@@ -1,0 +1,16 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following conditional statements is used to test multiple conditions?  ,if ,if…else ,if…elif…else ,All of these     ,C,1
+By which year does the SDG 2 aims to end hunger? ,2025,2030,2035,3030,B,1
+AI for climate action has the potential to reduce global greenhouse gas emissions by up to ____________. ,2%,4%,8%,16%,B,1
+"What is the answer of the expression, 2**2**2?  ",2,16,4,8,B,1
+"Which of the following SDG targets to prevent and reduce marine pollution, protect marine and coastal ecosystems, regulate harvesting and end destructive fishing practices? ",SDG 13 ,SDG 14 ,SDG 17 ,None of these,B,1
+Which of the following is not the conditional statement in Python?  ,if Statement  ,if…else Statement  ,if...elif...else Statement  ,None of these      ,D,1
+In which year did the idea of SDG from the Rio+20 Summit came? ,2010,2011,2012,2014,C,1
+"If a = 20 and b = 10, then what will be the output of the following code: if (false): print(a + b) else: print(a – b)  ",30,20,10,Nothing will print     ,C,1
+What can we achieve by using AI in education? ,Quality education ,Quality books ,Quality food ,Quality time ,A,1
+"What will be the output of the following code? 
+ if(True): 
+    print(“Hello”) 
+ else: 
+    print(“Hi”)  
+",Hello,Hi,Hello Hi,Nothing will print     ,A,1

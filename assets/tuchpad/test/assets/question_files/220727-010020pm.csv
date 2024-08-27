@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+____________ blocks are used to draw footprints of Sprite.  ,Looks,Pen,Control,Event,B,1
+____________ is used so that the Sprite will not draw as it moves.,pen down,pen up,stamp,pen sit,B,1
+If...then...else and Forever are ____________ blocks.,Pen,Control,Motion,Looks,B,1
+____________ blocks are used to control a sprite�s appearance.,Motion,Looks,Pen,Control,B,1
+____________ blocks are colour-coded as dark green. ,Motion,Looks,Pen,Event,C,1
+____________ operators are used to compare relation between two values or variables.,Arithmetic,Logical,Relational,None of these,C,1
+Buying goods online is called online ____________.,shopping,chatting,reading,goods,A,1
+____________ is an online communication system.,Web browser,Home page,E-mail,Web page,C,1
+Chrome is a web browser developed by ____________.,Mozilla,Google,Mosaic,Mark-1,B,1
+Every website has a unique address called ____________.,URL,IE,IP,HTTP,A,1

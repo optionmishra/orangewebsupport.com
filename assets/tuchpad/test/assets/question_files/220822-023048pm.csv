@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following statements is used to take the input from the user? ,del( ) ,list( ) ,input( )   ,print(),C,1
+Python was developed in 1991 by ____________ . ,Guido Van Rossum ,Mitchel Resnick ,Both A and B   ,None of these,A,1
+Which of the following variable is invalid? ,Neha?Bhatia ,Priya $pay ,?Usha123,All of these,B,1
+Which of the following symbols is used to write comments in Python? ,= ,#,$,||,B,1
+The concept of AI was first propounded in ____________ . ,1950,1956,1980,All of these,A,1
+Which of the following is/are subset(s) of Artificial Intelligence? ,Machine Learning  ,Deep Learning ,Both A and B   ,None of these,C,1
+Which of these are widely used in manufacturing industries such as automotive? ,Industrial robots  ,Science robots  ,Androids,All of these,A,1
+Which of the following is a human like machine that can do automated tasks? ,Transformer ,Robot ,Mechatronics,None of these,B,1
+The term mechatronics was coined by ____________ . ,Karel Kapek  ,Isaac Asimov ,Tetsuro Mori   ,Mitchel Resnick ,C,1
+Which of the following is a subset of AI that includes abstruse statistical techniques? ,Machine Learning ,Deep Learning ,Mind Learning   ,None of these,A,1

@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Arranging the records in a particular order is called ____________ .,Query ,Report,Sorting,None of these,C,1
+Which of the following can be a unique field in a table?,Roll No,Address,Name,All of these,A,1
+The process of displaying the information from the table is called ____________ .,Query,Form,Report,None of these,B,1
+Which of the following stores a sequential number for every record in a table?,Serial,Auto Number,Autofill,All of these,B,1
+A table can be created by using ____________ .,Design view,Datasheet view,Both A and B,None of these,C,1
+The feature in MS Access which allows us to retrieve data from a table is called ____________ .,Primary Key,Foreign Key,Select Query,All of these,C,1
+"____________ is an organised way of creating, editing and displaying data from the table.",Report,Query,Form,None of these,C,1
+____________ displays the data in either descending or ascending order during the run time in the query window.,Field,Sort,Criteria,All of these,B,1
+____________ are the links that associate a field in one table with the same field in another table.,Structures,Relationships,Binding,None of these,B,1
+Which of the following is a type of query in MS Access?,Select Query,Parameter Query,Both A and B,None of these,C,1

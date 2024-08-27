@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+In a binary number system right most digit before the fractional point is called ____________. ,MSD (Most Significant Digit) ,registers,LSD (Least Significant Digit) ,None of these ,C,1
+Which one of the cell references can be included in relative reference? ,A3,A$1 ,$A$4 ,$D6 ,A,1
+Which of the following are the two symbols present in the binary number system? ,1 and 2 ,8 and 9 ,0 and 1 ,5 and 6 ,C,1
+The cell address in the formula is known as ____________. ,Range,Mixed reference ,Cell reference ,None of these ,C,1
+Which of these is the vertical axis used to plot the values in a chart? ,Bar,Value Axis ,Data,Formulas,B,1
+Which of the following groups contain the Conditional Formatting command? ,Font,Clipboard,Insert,Styles,D,1
+Which of the following key combinations is used to get the sum of adjacent cells? ,SUM(),Alt + = ,Ctrl +,None of these ,B,1
+The decimal number (345)10 is equivalent to ____________. ,(101011001)2 ,(111011101)2 ,(110111001)2 ,(111110001)2,A,1
+____________ is selected when you want to highlight all cells satisfying a given condition.,Highlight Cells Rules  ,Top/Bottom Rules  ,Data Bars  ,Colour Scales  ,A,1
+Which of the following is another name of the base 2? ,Binary number system ,Decimal number system ,Hexadecimal number system ,None of these ,A,1

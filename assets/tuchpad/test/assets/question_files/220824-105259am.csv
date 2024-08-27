@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+The digital computer represents all kinds of data and information in ____________ numbers.  ,Binary,Hexadecimal,Decimal,None of these,A,1
+Which of the following is a valid octal number? ,183,965,983,345,D,1
+Which of the following are the two symbols present in the binary number system? ,1 and 2  ,8 and 9   ,0 and 1   ,5 and 6   ,C,1
+"In the binary number system, right-most digit before the fractional point is called ____________ . ",MSD, BSD   ,LSD,None of these,C,1
+"In binary number system, 1 Nibble is equal to ____________ .  ",4 bits,8 bits,16 bits,1 bit,A,1
+Base 2 is another name for the ____________ .  ,Binary number system  ,Decimal number system   ,Hexadecimal number system   ,Octal number system   ,A,1
+The conditional formatting can be done from ____________ menu. ,Format,Data,Tools,None of these,A,1
+"When we apply filter feature, small arrows appear near ____________ . ",Row headers,Sheet tab,Column headers,None of these,C,1
+Sort command is present under ____________ menu. ,File,Tools,Data,Help,C,1
+Numbers are sorted in ascending order from ____________ . ,0 to 9  ,9 to 0   ,Both A and B,None of these,A,1

@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.2rem;
+}
+body {
+  background-color: #f2f2f2;
+  font-family: "Lato", sans-serif;
+
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.backvideo{
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bakcolor{
+
+background-color: white;
+border-radius: 50%;
+
+}
+
+.txtcolor{
+
+color: white;
+
+}
+
+img {
+  pointer-events: none;
+}
+
+.email_pw {
+  position: relative;
+  padding: 0;
+  margin-top: 15px;
+}
+.email_pw i img {
+  width: 90%;
+}
+
+.email-icon {
+  position: absolute;
+  pointer-events: none;
+  top: 15px;
+  left: 10px;
+}
+.pw-icon {
+  position: absolute;
+  pointer-events: none;
+  top: 58px;
+  left: 10px;
+}
+
+.email_pw input {
+  width: 90%;
+  margin: 5px 0;
+  padding: 8px;
+  padding-left: 42px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+}
+/* left illustration*/
+.ill-2 {
+  background-image: url(../img/watch.PNG);
+  background-repeat: no-repeat;
+  width: 190px;
+  height: 44px;
+  margin: 5px 0 0 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ill-2 a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: white;
+}
+/*  */
+.show_pw {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.show_pw label {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+/*  */
+footer {
+  position: relative;
+}
+.wa-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+}
+/*  */
+.btn-login {
+  margin-top: 2%;
+	height: 45px;
+	width: 130px;
+	color: rgb(224, 94, 85);
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgb(224, 94, 85);
+	text-align: center;
+	padding: 10px 0;
+	box-shadow: 0 0 10px rgb(224, 94, 85, 0.1);
+	transition: 0.4s;
+	cursor: pointer;
+
+	border-radius: 4px;
+
+	font-weight: 600;
+}
+.btn-login:hover {
+  color: white;
+
+	box-shadow: 0 0 20px rgb(224, 94, 85, 0.6);
+	background-color: rgb(224, 94, 85);
+}
+/*  */
+.reg {
+  justify-self: flex-end;
+  width: 100%;
+  height: 162px;
+  position: relative;
+}
+
+.signup-pill {
+	
+	height: 45px;
+	width: 270px;
+	color: white;
+	background-color: rgb(224, 94, 85);
+	border: 1px solid rgba(104, 85, 224, 2);
+	
+ position: relative;
+ margin-top: -2%;
+ margin-left: -18%;
+	box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+	transition: 0.4s;
+	cursor: pointer;
+	border: 0;
+	border-radius: 20px;
+
+	font-weight: 600;
+}
+
+.signup-pill:hover {
+	box-shadow: 0 0 10px rgb(224, 94, 85, 0.6);
+	background-color: rgb(224, 94, 85);
+}
+
+.reg-line {
+
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 61px;
+  position: absolute;
+  bottom: 64px;
+  right: 102px;
+}
+.reg a {
+  position: absolute;
+  font-size: 14px;
+  color: black;
+  top: 18px;
+  left: 55px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.reg img {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/*  */
+.home {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  right: 0;
+  top: 0;
+  background-color: #e05e55;
+  color: white;
+  font-size: 14px;
+  padding: 5px;
+  border: none;
+  border-radius: 0 10px 0 0;
+}
+.home a {
+  color: white;
+  text-decoration: none;
+}
+.home-card {
+  min-height: 450px;
+  max-width: 800px;
+  margin: 1rem auto;
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 30%) !important;
+}
+/*  */
+.left-ill-img {
+  max-width: 240px;
+  margin-left: 7%;
+}
+@media (min-width: 768px) {
+  .main-wrapper {
+    min-height: 100vh;
+  }
+  .home-card {
+    min-width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  .wa-icon {
+    bottom: 5px;
+    right: 10px;
+    width: 60px;
+  }
+  .left-ill-img {
+    max-width: 230px;
+  }
+}
+/* Registration Modal */
+/* The Modal (background) */
+.registration-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+.modal-header h5 {
+  text-align: center;
+  width: 100%;
+}
+/* Modal Content/Box */
+.registration-modal-content {
+  background-color: #fefefe;
+  /* margin: 15% auto; 15% from the top and centered */
+  padding: 0 10px 10px 10px;
+  /* border: 1px solid #888; */
+  width: 20%; /* Could be more or less, depending on screen size */
+  min-width: 400px;
+  border-radius: 1rem;
+}
+.role-btn {
+  outline: none;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  color: #ffffff;
+}
+.student-reg-btn {
+  background-color: #f9af18;
+}
+.student-reg-btn:hover {
+  background-color: #e89e07;
+}
+.teacher-reg-btn {
+  background-color: #123258;
+}
+.teacher-reg-btn:hover {
+  background-color: #012147;
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

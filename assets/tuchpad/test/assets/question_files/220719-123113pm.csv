@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of these terms describe a computer that is connected to a network? ,Node,Device,Unit,Attachment,A,1
+Which of the following is an unique field in table? ,Primary Key ,Secondary key ,Composite Key ,None of these ,A,1
+A computer network that spans across a city can be called a ____________. ,LAN,WAN,MAN,CAN,C,1
+Which of these is the process of displaying the information from the table? ,Query,Report,Form ,Wizard,C,1
+Which networking device can convert the digital data into analog signal and vice versa? ,Hub,Modem ,Router,LAN Card ,B,1
+The feature in MS Access which allows us to retrieve data from a table is called ..................... . ,Primary Key ,Select Query ,Foreign Key ,None of these ,B,1
+"In ____________ topology the central node acts as a hub, switch or router to which all the other nodes are connected. ",Bus,Ring,Star,Mesh,C,1
+"Which of the following is an organised way of creating, editing and displaying data from the table? ",Report,Form ,Query,Table ,B,1
+Arranging the records in a particular order is called ____________. ,Query,Sorting,Report,Table,B,1
+Which of the following displays the data in either descending or ascending order during the run time in the query window? ,Field,Or ,Sort,Criteria ,C,1

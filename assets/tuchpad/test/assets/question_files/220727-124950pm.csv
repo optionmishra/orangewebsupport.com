@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+"The ____________ contains multiple tabs, each with several group of commands.",status bar,slide pane,ribbon,menu bar,C,1
+The ____________ displays the slides as thumbnails.  ,outline/slides pane,drawing area,work area,canvas,B,1
+A title slide displays the text ____________.,placeholder,size,font,alignment,A,1
+____________ is located at the top of the MS PowerPoint window.,Status bar,Work area,Title bar,Menu bar,C,1
+____________ command is used to lift up the turtle�s pen.,PD,CU,PU,DU,C,1
+The triangle shaped object in LOGO is ____________.,Square,Turtle,Mouse,Tie,B,1
+The command used to draw a circle is ____________.,REPEAT,PRINT,CIRCLE,None of these,A,1
+The command used to turn the turtle in right direction is ____________.,FD,LT,RT,RD,C,1
+A polygon with five sides is called ____________.,Triangle,Pentagon,Heptagon,Petagon,B,1
+The command used to draw a decagon is ____________. ,REPEAT 6 [FD 70 RT 60],REPEAT 8 [FD 70 RT 45],REPEAT 10 [FD 70 RT 36],REPEAT 20 [FD 70 RT 36],C,1

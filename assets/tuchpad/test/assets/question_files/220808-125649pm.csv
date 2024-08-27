@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+Which of these is not an audio file type supported by PowerPoint?  ,aiff,mp3,asf,m4a,C,1
+Which of the following is not a correct audio option?,Play in the Slides,Hide During Show,Rewind after Playing,Loop until Stopped,A,1
+Which of these is not a video file type supported by PowerPoint?,mp4,wma,mpeg,avi,B,1
+Which of these you cannot open using an action button?,E-mail,A web page,Windows 10,Next slide,C,1
+Which of the following is not a printing option?  ,Print All Presentations,Print Selection,Print Current Slide,Custom Range,A,1
+Which one of the following cell references can be included in relative reference?,A3,$A$4,A$1,$D6,A,1
+Which of the following functions is used to calculate the average of a range of values?,AVERAGE,SUM,AVG,None of these,A,1
+The cell address in the formula is known as ____________.  ,Range,Cell reference,Mixed reference,None of these,B,1
+A group of selected cells is called ____________. ,Selection,Combination,Cell range,None of these,C,1
+The ____________ function returns the square root of the given number.,MOD( ),INT( ),POWER( ),SQRT( ),D,1

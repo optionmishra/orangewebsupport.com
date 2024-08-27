@@ -1,0 +1,11 @@
+question,option_a,option_b,option_c,option_d,answer,marks
+"Under which tab, themes are present? ",Insert ,View ,Design ,None,A,1
+Which of the following is not a view button? ,Normal ,Reading ,Layout ,None,C,1
+Which of the following is a default view of a presentation? ,Slide Show View ,Normal View ,Reading View,Outline View,B,1
+A script is also known as a __________.,Blocks ,Program ,Sprite ,None,B,1
+Which blocks are used to control the appearance of Sprite? ,Control ,Looks ,Event ,Pen,B,1
+Which of the following is not a logical operator? ,Less than ,And ,Or,NOT,A,1
+"In which category, the Repeat block is present? ",Looks ,Motion ,Control Flow ,None,C,1
+How many times should a sprite move and turn to draw a square?,3,4,5,6,A,1
+Which block is used to make the sprite do something infinitely? ,Forever ,Repeat ,Repeat Until,None,A,1
+What is the full form of WWW? ,World Wide Web ,World Web Wide ,World Wide War ,Web World Wide  ,A,1

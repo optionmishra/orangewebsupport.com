@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following is an example of a supercomputer?,PARAM 9000,HCL Magnum,VAX7500,Both A & B,A,1
+Which of the following is an example of embedded computer?,Microwave,ATM,Digital Camera,All of these,D,1
+Which of the following is not a digital computer?,Digital watch,Digital thermometer,Electricity meter,Microwave,D,1
+Which of the following units performs comparison and logical operations?,ALU,CU,MU,None of these,A,1
+Which of the following is an impact printer?,Laser printer,Inkjet printer,Dot Matrix printer,None of these,C,1
+Which of the following is left-aligned by default?,Vlaues,Labels,Formulas,None of these,B,1
+Which of the following is known as vertical axis?,Category axis,Value axis,Both A & B,None of these,B,1
+Which of the following displays the colour representation of each data series in the chart?,Data series,Horizontal axis,Legend,Plot Area,C,1
+Which chart is used to display data within a specified time period in the form of vertical bars?,Column chart,Bar chart,Line chart,Pie Chart,A,1
+Which chart is used to display the quantitative magnitude of the data graphically?,Area,Line,Scatter,None of these,A,1

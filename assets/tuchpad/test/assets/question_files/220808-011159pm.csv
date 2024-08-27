@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following conditional statements is used to test multiple conditions?,if,if�else,if�elif�else,All of these,C,1
+What will be the output of the following code? if(True): print(�Hello�) else: print(�Hi�),Hello,Hi,Hello Hi,Nothing will print,A,1
+What will be the output of the following expression? 22 % 3  ,7,1,0,5,B,1
+The statement using AND operator results true if ____________.,both operands are true,both operands are false,either of the operands is true,neither of the operands is true,A,1
+Which one of the following has the highest precedence in a logical expression?,Addition,Multiplication,Exponential,Parentheses,D,1
+Which of the following is true?,Comments are for programmers for better understanding of the program.,Python Interpreter ignores comments.,"You can write multi-line comments in Python using triple quotes, either ��� or ���.",All of these,D,1
+Which of the following symbol(s) is/are used for comments in Python?,//,��,/**/,#,D,1
+Python is a ____________ programming language.,High-level,Middle-level,Low-level,None of these,A,1
+Which of the following variable is incorrect?,NaMe,?name,@value,number,C,1
+Which of the following is used as a separator with print() function?  ,",",/t,/n,All of these,C,1

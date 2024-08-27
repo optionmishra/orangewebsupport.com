@@ -1,0 +1,11 @@
+﻿question,option_a,option_b,option_c,option_d,answer,marks
+Which of the following is not a social networking website? ,Facebook ,Twitter,Instagram,None of these,D,1
+"The process or stealing personal information, changing financial data, breaking security systems to gain unauthorised access of computer systems is called ____________ . ",Cracking  ,Hacking ,Chatting ,None of these,A,1
+Which of the following is not a communication service of Internet? ,Chat,E-mail,Google Drive,VoIP,C,1
+"It is a highlighted text or image, which when clicked takes to another web page. ",Anchor ,Hyperlink,Tag,Table,B,1
+Which of these attributes is used in internal linking? ,NAME,HREF,Both A and B,None of these,C,1
+"Which attribute specifies the alternate text to be displayed in the web browser, if the provided image is not found? ",SRC,ALT,ALTERNATE,None of these,B,1
+Which of the following statements terminates the execution of the loop? ,if,for,break,continue,C,1
+Which of the following is a looping statement in Python? ,for statement  ,while statement  ,Borth A and B,break statement   ,C,1
+What will be the output of the following code?   if(True):print(�Hello�)   else:      print(�Hi�) ,Hello ,Hello Hi   ,Hi,Nothing will print   ,A,1
+Which of the following conditional statements is used to test multiple conditions,if,if�elif�else   ,if�else   ,All of these   ,B,1
