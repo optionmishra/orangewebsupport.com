@@ -33,6 +33,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 assets/files/
 assets/question_files/
 assets/bookicon/
+assets/tuchpad/
 qrvideo/
 application/config/database.php
 files/
