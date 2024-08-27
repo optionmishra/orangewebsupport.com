@@ -35,7 +35,12 @@ assets/question_files/
 assets/bookicon/
 assets/tuchpad/
 qrvideo/
+
 application/config/database.php
+application/config/config.php
+
 files/
 onlineAppContent/
-
+tests/
+.htaccess
+.htaccess-aws
