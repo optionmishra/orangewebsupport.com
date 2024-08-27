@@ -13,18 +13,18 @@
 </head>
 
 <body>
-<video class="backvideo" autoplay muted playsinline loop preload="auto" >
-    <source src="/assets/home/backvid.mp4" type="video/mp4">
-</video>
+    <video class="backvideo" autoplay muted playsinline loop preload="auto">
+        <source src="<?= base_url('assets/home/backvid.mp4') ?>" type="video/mp4">
+    </video>
     <div class="container main-wrapper d-flex flex-column justify-content-around">
-    
+
         <div class="row justify-content-center mt-3">
-        <img class="bakcolor" src="assets/home/img/orange-logo.svg" alt="" style="max-width: 150px" />
-            <h2 class="txtcolor" style="text-align: center " >Orange Education's Websupport</h2>
-            
+            <img class="bakcolor" src="assets/home/img/orange-logo.svg" alt="" style="max-width: 150px" />
+            <h2 class="txtcolor" style="text-align: center ">Orange Education's Websupport</h2>
+
         </div>
         <div class="card shadow p-4 home-card">
-        
+
             <div class="home">
                 <span><img src="assets/home/img/home.png" alt="" /></span>
                 <span><a href="https://www.orangeeducation.in/home/">Return to <br />Main Site</a></span>
@@ -73,7 +73,7 @@
                         <div class="reg-line">
                             <button class="signup-pill" id="registrationBtn">SIGNUP</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
