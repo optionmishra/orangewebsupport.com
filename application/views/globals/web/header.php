@@ -179,38 +179,32 @@
                         <div class="col-sm-4 col-md-2 col-lg-10 order-3 order-lg-2">
                             <div class="mainmenu__wrap">
                                 <nav class="mainmenu__nav">
-                                    <?php
-                                    foreach ($user as $us) :
-                                    ?>
+                                    <ul class="mainmenu">
+                                        <?php if (!$is_erp_login) : ?>
+                                            <?php if ($user->school_name != '') { ?>
+                                                <li class=""><a href="#" style="color: #89d700;font-weight: 800;padding-right: 30px;padding-top: 5px;font-size: 16px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 443px;"> <span style="text-transform: uppercase;color:#ffffff;"> <span style="text-transform: uppercase;color:#ffffff;"> &nbsp;<?= $user->school_name ?></span></a></li>
+                                            <?php } ?>
+                                        <?php endif; ?>
+                                        <li class="active"><a href="dashboard">Home</a></li>
+                                        <!--<li class=""><a href="helps">Help</a></li>-->
+                                        <li class=""><a href="logout">Logout</a></li>
+                                        <li class=""><a href="profile">Profile</a></li>
+                                        <?php if (!$is_erp_login) : ?>
+                                            <?php if ($user->teacher_code != '') { ?>
+                                                <li class=""><a href="#" style="color:#000000;font-weight:600;">Teacher Code : <span style="text-transform: uppercase;color:#ff9900;"> &nbsp;<?= $user->teacher_code ?></span></a></li>
+                                            <?php } ?>
+                                        <?php endif; ?>
+                                        <li><a href="profile" class="spe-us">
 
-                                        <ul class="mainmenu">
-                                            <?php if (!$is_erp_login) : ?>
-                                                <?php if ($us->school_name != '') { ?>
-                                                    <li class=""><a href="#" style="color: #89d700;font-weight: 800;padding-right: 30px;padding-top: 5px;font-size: 16px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 443px;"> <span style="text-transform: uppercase;color:#ffffff;"> <span style="text-transform: uppercase;color:#ffffff;"> &nbsp;<?= $us->school_name ?></span></a></li>
+                                                <?php if (empty($user->dp)) { ?>
+                                                    <img src="assets/img/3.png" alt="logo images">
+                                                <?php } else { ?>
+                                                    <img src="assets/img/<?= $user->dp ?>" alt="logo images">
                                                 <?php } ?>
-                                            <?php endif; ?>
-                                            <li class="active"><a href="dashboard">Home</a></li>
-                                            <!--<li class=""><a href="helps">Help</a></li>-->
-                                            <li class=""><a href="logout">Logout</a></li>
-                                            <li class=""><a href="profile">Profile</a></li>
-                                            <?php if (!$is_erp_login) : ?>
-                                                <?php if ($us->teacher_code != '') { ?>
-                                                    <li class=""><a href="#" style="color:#000000;font-weight:600;">Teacher Code : <span style="text-transform: uppercase;color:#ff9900;"> &nbsp;<?= $us->teacher_code ?></span></a></li>
-                                                <?php } ?>
-                                            <?php endif; ?>
-                                            <li><a href="profile" class="spe-us">
-
-                                                    <?php if (empty($us->dp)) { ?>
-                                                        <img src="assets/img/3.png" alt="logo images">
-                                                    <?php } else { ?>
-                                                        <img src="assets/img/<?= $us->dp ?>" alt="logo images">
-                                                    <?php } ?>
-                                                    &nbsp;
-                                                    Hi,&nbsp; <b class="ss-pp"><?= $us->fullname ?></b></a>
-                                            </li>
-                                        </ul>
-                                    <?php endforeach; ?>
-
+                                                &nbsp;
+                                                Hi,&nbsp; <b class="ss-pp"><?= $user->fullname ?></b></a>
+                                        </li>
+                                    </ul>
                                 </nav>
                             </div>
                         </div>

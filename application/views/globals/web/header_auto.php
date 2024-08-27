@@ -179,17 +179,11 @@
                         <div class="col-sm-4 col-md-2 col-lg-10 order-3 order-lg-2">
                             <div class="mainmenu__wrap">
                                 <nav class="mainmenu__nav">
-                                    <?php
-                                    foreach ($user as $us) :
-                                    ?>
-
-                                        <ul class="mainmenu">
-                                            <?php if ($us->school_name != '') { ?>
-                                                <li class=""><a href="#" style="color: #89d700;font-weight: 800;padding-right: 30px;padding-top: 5px;font-size: 16px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 443px;"> <span style="text-transform: uppercase;color:#89d700;"> <span style="text-transform: uppercase;color:#89d700;"> &nbsp;<?= $us->school_name ?></span></a></li>
-                                            <?php } ?>
-                                        </ul>
-                                    <?php endforeach; ?>
-
+                                    <ul class="mainmenu">
+                                        <?php if ($user->school_name != '') { ?>
+                                            <li class=""><a href="#" style="color: #89d700;font-weight: 800;padding-right: 30px;padding-top: 5px;font-size: 16px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 443px;"> <span style="text-transform: uppercase;color:#89d700;"> <span style="text-transform: uppercase;color:#89d700;"> &nbsp;<?= $user->school_name ?></span></a></li>
+                                        <?php } ?>
+                                    </ul>
                                 </nav>
                             </div>
                         </div>

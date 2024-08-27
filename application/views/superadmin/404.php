@@ -53,19 +53,17 @@
                                 <nav class="mainmenu__nav">
                                     <?php
                                     if ($this->session->userdata('username')) {
-                                        foreach ($user as $us) :
                                     ?>
-                                            <ul class="mainmenu">
-                                                <li class="active"><a href="dashboard">Dashboard</a></li>
-                                                <li class=""><a href="logout">Logout</a></li>
-                                                <li class=""><a href="profile">Profile</a></li>
-                                                <li><a href="profile" class="spe-us">
-                                                        <img src="assets/img/<?= $us->dp ?>" alt="logo images">
-                                                        Hi, <b class="ss-pp"><?= $us->fullname ?></b></a>
-                                                </li>
-                                            </ul>
-                                    <?php endforeach;
-                                    } ?>
+                                        <ul class="mainmenu">
+                                            <li class="active"><a href="dashboard">Dashboard</a></li>
+                                            <li class=""><a href="logout">Logout</a></li>
+                                            <li class=""><a href="profile">Profile</a></li>
+                                            <li><a href="profile" class="spe-us">
+                                                    <img src="assets/img/<?= $user->dp ?>" alt="logo images">
+                                                    Hi, <b class="ss-pp"><?= $user->fullname ?></b></a>
+                                            </li>
+                                        </ul>
+                                    <?php } ?>
                                 </nav>
                             </div>
                         </div>
