@@ -77,6 +77,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row m-0 p-2">
+                        <div class="col-lg-12 p-2">
+                            <label for="">Select Categories</label>
+                            <div class="row">
+                                <?php foreach ($cat as $ca) : ?>
+                                    <div class="col-md-6 form-check py-1">
+                                        <input type="checkbox" name="categories[]" id="cat<?= $ca->id ?>" value="<?= $ca->id ?>">
+                                        <label for="cat<?= $ca->id ?>" class="form-check-label"><?= $ca->name ?></label>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
                     <div class="modal-footer col-lg-12">
                         <button class="btn btn-danger float-right" data-dismiss="modal">Cancel</button>
                         <button class="btn btn-primary float-right">Save</button>
@@ -126,6 +139,19 @@
                                         <option value="<?= $class->id ?>"><?= $class->name ?></option>
                                     <?php endforeach; ?>
                                 </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-2">
+                        <div class="col-lg-12 p-2">
+                            <label for="">Select Categories</label>
+                            <div class="row" id="categoriesCheck">
+                                <?php foreach ($cat as $ca) : ?>
+                                    <div class="col-md-6 form-check py-1">
+                                        <input type="checkbox" name="categories[]" id="edit<?= $ca->id ?>" value="<?= $ca->id ?>">
+                                        <label for="edit<?= $ca->id ?>" class="form-check-label"><?= $ca->name ?></label>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>

@@ -116,7 +116,8 @@ class Web extends CI_Controller
 			'publication' => $this->AuthModel->publication($this->session->userdata('publication')),
 			'default' => $res,
 			'msubject' => $this->AuthModel->msubject($this->session->userdata('main_subject')),
-			'category' => $this->AuthModel->category(),
+			// 'category' => $this->AuthModel->category(),
+			'category' => $this->AuthModel->selectable_categories(),
 			'stucategory' => $this->AuthModel->categoryx_student(),
 			'classes' => $this->AuthModel->classes_array(),
 			// 'classesteacher' => $this->AuthModel->classes_array(),
@@ -130,7 +131,7 @@ class Web extends CI_Controller
 		];
 		// echo '<pre>', var_dump($this->session->userdata()), '</pre>';
 		// echo '<pre>', var_dump($this->session->flashdata('login_type')), '</pre>';
-		// echo '<pre>', var_dump($data), '</pre>';
+		// echo '<pre>', var_dump($data['category']), '</pre>';
 		// var_dump($user_id);
 		// var_dump($selectable_classes);
 		// exit();

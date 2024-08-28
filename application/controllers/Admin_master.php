@@ -23,7 +23,7 @@ class Admin_master extends CI_Controller
 		$this->load->library('upload');
 		$this->load->library('email');
 		$this->load->library('excel');
-		$this->orange_epoch = $this->load->database('orange_epoch', TRUE);
+		// $this->orange_epoch = $this->load->database('orange_epoch', TRUE);
 	}
 
 	// classes start
@@ -1284,6 +1284,7 @@ class Admin_master extends CI_Controller
 				'name' => $this->input->post('name'),
 				'sid' => $this->input->post('sid'),
 				'class' => $this->input->post('class'),
+				'categories' => implode(',', $this->input->post('categories')),
 			];
 			$res = $this->AuthModel->create_subject($data);
 			if (!$res) {
@@ -1303,6 +1304,7 @@ class Admin_master extends CI_Controller
 				'name' => $this->input->post('name'),
 				'sid' => $this->input->post('sid'),
 				'class' => $this->input->post('class'),
+				'categories' => implode(',', $this->input->post('categories')),
 			];
 			$res = $this->AuthModel->update_subject($details, $id);
 			if (!$res) {
@@ -2499,14 +2501,26 @@ class Admin_master extends CI_Controller
 
 	function default_product()
 	{
+		$selectedBoard = $this->input->post('select_board');
+		$selectedPublication = $this->input->post('select_publication');
+		$selectedClasses = $this->input->post('select_classes');
+		$selectedMSubject = $this->input->post('select_msubject');
 
-		$this->session->set_userdata('board', $this->input->post('select_board'));
-		$this->session->set_userdata('publication', $this->input->post('select_publication'));
+		$this->session->set_userdata('board', $selectedBoard);
+		$this->session->set_userdata('publication', $selectedPublication);
 		$this->session->set_userdata('publication_name', $this->session->userdata('publication_name'));
-		$this->session->set_userdata('classes', $this->input->post('select_classes'));
-		$this->session->set_userdata('msubject', $this->input->post('select_msubject'));
-		$res = $this->AuthModel->default_product();
-		$this->message('success', 'Items Find', $res);
+		$this->session->set_userdata('classes', $selectedClasses);
+		$this->session->set_userdata('msubject', $selectedMSubject);
+
+		$bookCategoriesArr = $this->AuthModel->book_categories_arr();
+		$currentCategoryId = $this->session->userdata('category');
+
+		if (!in_array($currentCategoryId, $bookCategoriesArr)) {
+			$this->session->set_userdata('category', reset($bookCategoriesArr));
+		}
+
+		$defaultProduct = $this->AuthModel->default_product();
+		$this->message('success', 'Items Found', $defaultProduct);
 	}
 
 	function default_product_old()

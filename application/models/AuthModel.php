@@ -336,16 +336,17 @@ class AuthModel extends CI_Model
 	{
 
 		$publication = $this->AuthModel->publicationx();
-		$category = $this->AuthModel->categoryx();
-		$admin = $this->db->query("SELECT * FROM web_user WHERE email = ? AND password = ? AND status = ? LIMIT 1", [$username, $password, '1']);
 		// $admin = $this->db->query("SELECT * FROM web_user WHERE email = ? AND password = ? LIMIT 1", [$username, $password]);
+		$admin = $this->db->query("SELECT * FROM web_user WHERE email = ? AND password = ? AND status = ? LIMIT 1", [$username, $password, '1']);
 		$adm = $admin->result();
+		// $category = $this->AuthModel->categoryx();
 		if ($admin->num_rows() == 1) {
 			$this->session->set_userdata('username', $username);
 			$this->session->set_userdata('user_id', $adm[0]->id);
 			$this->session->set_userdata('password', $password);
 			$this->session->set_userdata('type', $adm[0]->user_type);
 			if ($adm[0]->user_type == 'Student') {
+				$category = $this->AuthModel->selectable_categories($adm[0]->subject, $adm[0]->classes);
 				$this->session->set_userdata('publication', $publication[0]->id);
 				$this->session->set_userdata('classes', $adm[0]->classes);
 				$this->session->set_userdata('section', $adm[0]->class_section);
@@ -359,6 +360,9 @@ class AuthModel extends CI_Model
 				$this->session->set_userdata('school_name', $adm[0]->school_name);
 			} elseif ($adm[0]->user_type == 'Teacher') {
 				$msubject = explode(',', $adm[0]->subject)[0];
+				$classes = $this->AuthModel->get_teacher_classes($adm[0]->id, $msubject);
+				$category = $this->AuthModel->selectable_categories($msubject, $classes[0]);
+
 				$this->session->set_userdata('publication', $publication[0]->id);
 				$this->session->set_userdata('teacher_classess', $adm[0]->classes);
 				$this->session->set_userdata('teacher_code', $adm[0]->teacher_code);
@@ -371,7 +375,6 @@ class AuthModel extends CI_Model
 				$this->session->set_userdata('category_name', $category[0]->name);
 				$this->session->set_userdata('school_name', $adm[0]->school_name);
 				// $classes = $this->AuthModel->classesx();
-				$classes = $this->AuthModel->get_teacher_classes($adm[0]->id, $msubject);
 				$this->session->set_userdata('classes', $classes[0]);
 			}
 			return true;
@@ -2014,5 +2017,41 @@ class AuthModel extends CI_Model
 		// To get the result
 		$result = $query->result_array();
 		return $result;
+	}
+
+	function book_categories_arr($mSubjectId = null, $classes = null)
+	{
+		if (empty($mSubjectId)) {
+			$mSubjectId = $this->session->userdata('msubject');
+		}
+		if (empty($classes)) {
+			$classes = $this->session->userdata('classes');
+		}
+		$subject = $this->db->where('sid', $mSubjectId)->where('class', $classes)->get('subject')->row();
+		$categoryIds = explode(',', $subject->categories);
+
+		return $categoryIds;
+	}
+
+	function selectable_categories($mSubjectId = null, $classes = null)
+	{
+		if (empty($mSubjectId)) {
+			$mSubjectId = $this->session->userdata('msubject');
+		}
+		if (empty($classes)) {
+			$classes = $this->session->userdata('classes');
+		}
+		// echo '<pre>', var_dump($mSubjectId), '</pre>';
+		// echo '<pre>', var_dump($classes), '</pre>';
+
+
+		$subject = $this->db->where('sid', $mSubjectId)->where('class', $classes)->get('subject')->row();
+		$categoryIds = explode(',', $subject->categories);
+		$this->db->where_in('id', $categoryIds);
+		$this->db->order_by('orderb', 'asc');
+		$categories = $this->db->get('category')->result();
+
+
+		return $categories;
 	}
 }

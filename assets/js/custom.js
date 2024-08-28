@@ -1467,6 +1467,16 @@ $(".subjectTables").on("click", ".edit-subject", function () {
 		data: { id: id },
 		success: function (data) {
 			var subject = data.data[0];
+			//   #mod
+			$("#categoriesCheck input").attr("checked", false);
+			if (subject.categories) {
+				// perform these only if subject has categories
+				let categories = subject.categories.split(",");
+				categories.forEach((item, key, arr) => {
+					$(`#edit${item}`).attr("checked", true);
+				});
+			}
+			// end
 			$("#subject_id").val(subject.id);
 			$("#getname").val(subject.name);
 			$("#gsubject").val(subject.sid);
@@ -2692,9 +2702,14 @@ $(document).ready(function () {
 			$("#uploadFile").show();
 		}
 	});
-});
 
-var cityTable = $("#series_users_table").DataTable({
-	serverSide: false,
-	columns: [{ data: "#" }, { data: "Series Name" }, { data: "Users" }],
+	var cityTable = $("#series_users_table").DataTable({
+		serverSide: false,
+		columns: [{ data: "#" }, { data: "Series Name" }, { data: "Users" }],
+	});
+
+	// Reset the form in modal when modal is hidden
+	$(".modal").on("hidden.bs.modal", function () {
+		$(this).find("form").trigger("reset");
+	});
 });
