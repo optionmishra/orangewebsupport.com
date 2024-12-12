@@ -3570,4 +3570,100 @@ class Admin_master extends CI_Controller
 		is_file($thumbnail_file) && unlink($thumbnail_file);
 		is_file($content_file) && unlink($content_file);
 	}
+
+
+	function add_notification()
+{
+    // Skip permission check
+    if ($this->permission->is_allow('New Notification')) {
+    
+    $data = [
+        'title' => $this->input->post('title'),
+        'description' => $this->input->post('description'),
+    ];
+    
+    log_message('debug', 'Notification Data: ' . print_r($data, true));
+    
+    $res = $this->AuthModel->create_notification($data);
+    
+    if (!$res) {
+        log_message('error', 'Error creating notification: ' . $this->AuthModel->error);
+        $this->message('error', $this->AuthModel->error);
+    } else {
+        $this->message('success', 'Notification created successfully.');
+		redirect('admin_master/add_notification');
+    }
+
+    } else {
+        $this->message('error', 'Permission Denied.');
+    }
+}
+	// Update Notification
+	public function update_notification()
+{
+    // Uncomment this line if you want to check for permissions
+    if ($this->permission->is_allow('Update Notification')) {
+        
+    // Get the ID of the notification to update
+    $id = $this->input->post('id');
+    
+    // Prepare the data to update
+    $details = [
+        'title' => $this->input->post('title'),
+        'description' => $this->input->post('description')
+    ];
+
+    // Log the data for debugging
+    log_message('debug', 'Updating notification ID: ' . $id . ' with data: ' . print_r($details, true));
+
+    // Call the model method to update the notification
+    $res = $this->AuthModel->update_notification($details, $id);
+    
+    // Check if the update was successful
+    if (!$res) {
+        // Set an error message if the update failed
+        $this->message('error', $this->AuthModel->error);
+    } else {
+        // Set a success message if the update was successful
+        $this->message('success', 'Notification updated successfully.');
+    }
+
+    } else {
+        $this->message('error', 'Permission Denied.');
+    }
+}
+	// Delete Notification
+	function delete_notification()
+	{
+		if ($this->permission->is_allow('Delete Notification')) {
+			$id = $this->input->post('id');
+			$res = $this->AuthModel->delete_record('notifications', 'id', $id);
+			if (!$res) {
+				$this->message('error', $this->AuthModel->error);
+			}
+			$this->message('success', 'Notification deleted successfully.');
+		} else {
+			$this->message('error', 'Permission Denied.');
+		}
+		
+	}
+	
+	// Retrieve Notifications
+	function notifications()
+	{
+		
+		$res = $this->AuthModel->get_notifications();
+		$i = 1;
+		foreach ($res as $key => &$value) {
+			$value->sr_no = $i;
+			$value->action = "<a notification_id='" . $value->id . "' class='pr-2 pointer edit-notification' data-toggle='modal' data-target='#edit-notification' data-title='" . htmlspecialchars($value->title) . "' data-description='" . htmlspecialchars($value->description) . "'><i class='fa fa-edit'></i></a>"
+				. "<a notification_id='" . $value->id . "' class='pointer delete_notification'><i class='fa fa-trash text-danger'></i></a>";
+			$i++;
+		}
+		$this->message('success', '', $res);
+	}
+
+
+
+
 }

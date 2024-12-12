@@ -706,4 +706,64 @@ class Superadmin extends CI_Controller
 			$this->per_denied('Permission Denied');
 		}
 	}
+
+function content_update(){
+
+	if ($this->session->userdata('level') == 'Super Admin') {
+		$this->check_isvalidated();
+		$data = [
+			'title' => 'Content_update',
+			'page' => 'Content_update',
+			'row' => $this->AuthModel->user_profile(),
+			'cat' => $this->AuthModel->category(),
+			'subject' => $this->AuthModel->subject(),
+			'permissions' => $this->AuthModel->permission(),
+			'siteName' => $this->siteName
+		];
+		$this->load->view('globals/header', $data);
+		$this->AuthModel->navbar();
+		$this->load->view('superadmin/content_update', $data);
+		
+		$this->load->view('globals/footer', $data);
+	} else {
+		$this->per_denied('Permission Denied');
+	}
+
+
+}
+
+
+function Notification()
+{
+    // Check if the user is a Super Admin
+    if ($this->session->userdata('level') == 'Super Admin') {
+        // Validate the session
+        $this->check_isvalidated();
+
+        // Retrieve data for the view
+        $data = [
+            'title' => 'Notications',
+            'page' => 'Notications',
+           
+ 
+            'permissions' => $this->AuthModel->permission(),
+            'siteName' => $this->siteName,
+            'notifications' => $this->WebModel->get_notifications() // Retrieve notifications
+        ];
+
+        // Load the views
+        $this->load->view('globals/header', $data);
+        $this->AuthModel->navbar();
+        $this->load->view('superadmin/Notification', $data); // Pass notifications to this view
+        $this->load->view('globals/footer', $data);
+    } else {
+        // Deny permission if the user is not a Super Admin
+        $this->per_denied('Permission Denied');
+    }
+}
+
+
+
+
+
 }

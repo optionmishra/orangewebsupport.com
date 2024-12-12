@@ -13,7 +13,7 @@ class Permission {
         $ci->db->where('username', $username);
         $user = $ci->db->get('user')->result();
         $user = $user[0];
-        if ($user->level == 'Super Adminn') {
+        if ($user->level == 'Super Admin') {
             return TRUE;
         } else {
             $permissions = explode(',', $user->permissions);

@@ -3,18 +3,15 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class WebModel extends CI_Model
-{
+class WebModel extends CI_Model {
 
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
         $this->load->database();
         $this->load->library('session');
     }
 
-    public function validate_email($id)
-    {
+    public function validate_email($id) {
         if (!empty($id)) {
             $this->db->where('email', $id);
         }
@@ -22,8 +19,7 @@ class WebModel extends CI_Model
         return $res;
     }
 
-    public function validate_student($id)
-    {
+	public function validate_student($id) {
         if (!empty($id)) {
             $this->db->where('teacher_code', $id);
             $res = $this->db->get('web_user')->row_array();
@@ -33,18 +29,19 @@ class WebModel extends CI_Model
             } else {
                 return $res;
             }
-        } else {
+        }else{
             return FALSE;
         }
+        
+       
     }
 
-    function Webuser()
-    {
+    function Webuser() {
         $username = $this->session->userdata('username');
         if (!empty($username)) {
             $this->db->where('email', $username);
         }
-        $result = $this->db->get('web_user')->row();
+        $result = $this->db->get('web_user')->result();
         if (!$result) {
             $this->error = $this->db->error();
             return FALSE;
@@ -52,9 +49,8 @@ class WebModel extends CI_Model
             return $result;
         }
     }
-
-    function subjects()
-    {
+    
+    function subjects() {
         $sub = $this->session->userdata('subject');
         $this->db->where('id', $sub);
         $result = $this->db->get('subject')->result();
@@ -65,9 +61,8 @@ class WebModel extends CI_Model
             return $result;
         }
     }
-
-    function msubjects()
-    {
+    
+    function msubjects() {
         $sub = $this->session->userdata('msubject');
         $this->db->where('id', $sub);
         $result = $this->db->get('main_subject')->result();
@@ -78,4 +73,20 @@ class WebModel extends CI_Model
             return $result;
         }
     }
+
+    public function get_notifications() {
+        $this->db->order_by('created_at', 'DESC');
+        $query = $this->db->get('notifications');
+    
+        if (!$query) {
+            log_message('error', 'Database query failed: ' . $this->db->last_query());
+            return []; // Return an empty array if the query fails
+        }
+    
+        return $query->result_array();
+    }
+
+
+
+
 }

@@ -23,7 +23,7 @@ class Web extends CI_Controller
 		$this->load->model('WebModel');
 		$this->siteName = 'touchpadwebsupport.com';
 		//Ckeditor's configuration
-	}
+	} 
 
 	function message($type, $msg, $data = null)
 	{
@@ -36,7 +36,12 @@ class Web extends CI_Controller
 
 	public function index($msg = null)
 	{
+		$notifications = $this->WebModel->get_notifications();
 
+		if ($notifications === false) {
+			log_message('error', 'Failed to fetch notifications from the database.');
+			$notifications = []; // Set to empty array to prevent errors in the view
+		}
 		$data = [
 			'title' => 'Panel Home',
 			'page' => 'Home',
@@ -53,7 +58,8 @@ class Web extends CI_Controller
 			'subject' => $this->AuthModel->subject(),
 			'msubject' => $this->AuthModel->msubject(),
 			'classes' => $this->AuthModel->classes(),
-			'siteName' => $this->siteName
+			'siteName' => $this->siteName,
+			'notifications' => $notifications
 		];
 		// $this->load->view('globals/web/header_home', $data);
 		$this->load->view('web/index', $data);
@@ -969,4 +975,10 @@ class Web extends CI_Controller
 			header("location:" . base_url() . 'dashboard');
 		}
 	}
+	public function test_db_connection() {
+		$this->load->model('WebModel');
+		$notifications = $this->WebModel->get_notifications();
+		var_dump($notifications); // This will output the notifications
+	}
+
 }
