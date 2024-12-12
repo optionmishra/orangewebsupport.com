@@ -152,7 +152,12 @@
             display: block;
             margin-top: 10px;
         }
+
+        .iphone_frame {
+            background-image: url(<?= base_url('/images/category_bg.png') ?>);
+        }
     </style>
+    <link rel="stylesheet" href="<?= base_url('css/category.css') ?>">
 </head>
 
 <body>

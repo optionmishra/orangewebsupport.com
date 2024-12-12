@@ -27,15 +27,16 @@
 		padding: 5px 36px;
 		background-color: #79b6f7;
 	}
-	.img-btn{
+
+	.img-btn {
 		position: relative;
-		
+
 		width: 32px;
 		height: 32px;
-		right:15% ;
+		right: 15%;
 		border-radius: 8px;
 		box-shadow: 0px 2px 7px 0px grey;
-		
+
 	}
 
 	<?php if ($this->session->userdata('category_name') == 'Smart Class E-Book') : ?>.top-con,
@@ -85,9 +86,9 @@
 		<?php $userdata = $this->session->userdata(); ?>
 		<?php if (!$is_erp_login) : ?>
 			<?php if ($userdata['type'] == 'Teacher') : ?>
-				
+
 				<a href="web/teacher_panel" class="btn btn-primary ttl-btn">
-				<img src="/images/test/minilms.png" alt="Teacher Image" class="img-btn">Teacher Section</a>
+					<img src="<?= base_url('/images/test/minilms.png') ?>" alt="Teacher Image" class="img-btn">Teacher Section</a>
 			<?php else : ?>
 				<a href="web/student_panel" class="btn btn-primary ttl-btn">Student Section &nbsp </a>
 			<?php endif; ?>
@@ -170,48 +171,47 @@
 	</form>
 
 	<div class="row m-0 p-0">
-  <div class="col-lg-2 p-2 m-0 home-side">
-  <div class="iphone_frame">
-  <div class="iphone_back_frame">
-    <div class="wmain_sidebar">
-      <ul class="category-list">
-        <?php
-          $userdata = $this->session->userdata();
-          $current_subject = $this->session->userdata('msubject');
-          $current_class = $this->session->userdata('classes');
+		<div class="col-lg-3 p-2 m-0 home-side">
+			<div class="iphone_frame">
+				<div class="iphone_back_frame">
+					<div class="wmain_sidebar">
+						<ul class="category-list">
+							<?php
+							$userdata = $this->session->userdata();
+							$current_subject = $this->session->userdata('msubject');
+							$current_class = $this->session->userdata('classes');
 
-          foreach ($category as $cat) {
-            $has_entries = $this->db->where('msubject', $current_subject)
-              ->where('classes', $current_class)
-              ->where('type', $cat->id)
-              ->count_all_results('websupport');
+							foreach ($category as $cat) {
+								$has_entries = $this->db->where('msubject', $current_subject)
+									->where('classes', $current_class)
+									->where('type', $cat->id)
+									->count_all_results('websupport');
 
-            if ($cat->allow == 'Both' or $cat->allow == $userdata['type']) {
-              if ($has_entries == 0 || $has_entries == null) {
-                continue;
-              }
-        ?>
-        <li class="category-item" id="active<?= $cat->id ?>">
-          <a tab_id="<?= $cat->id ?>" class="new-search">
-            <img src="<?= $cat->image ?>" class="image_iphone_icon">
-			<span class="nametxt"> <?= $cat->name ?> </span>
-          </a>
-		 
-        </li>
-        <?php
-            }
-          }
-        ?>
-      </ul>
-    </div>
-  </div>
- 
-</div>
-  </div>
+								if ($cat->allow == 'Both' or $cat->allow == $userdata['type']) {
+									if ($has_entries == 0 || $has_entries == null) {
+										continue;
+									}
+							?>
+									<li class="category-item" id="active<?= $cat->id ?>">
+										<a tab_id="<?= $cat->id ?>" class="new-search">
+											<img src="<?= base_url('images/category-icons/' . $cat->image) ?>" class="image_iphone_icon">
+										</a>
+										<p> <?= $cat->name ?> </p>
+									</li>
+							<?php
+								}
+							}
+							?>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
 
 
-	
-		<div class="col-lg-10 m-0 p-3">
+
+		<div class="col-lg-9 m-0 p-3">
 
 			<div class="row">
 				<table id="srch_tbl" class="table table-striped table-bordered" style="width:100%;float:left;">
@@ -223,7 +223,7 @@
 					</thead>
 					<tbody class="row">
 						<?php
-						
+
 						if (empty($default)) { ?>
 							<p class="text-danger m-3" style="
 							font-weight: normal;
@@ -231,8 +231,8 @@ font-size: 20px;
 width: 50%;
 padding: 4rem 0;
 line-height: 1.5;"> Uh Oh! &#x1F626; <br>The content you are looking for is either under process or not available for the selected criteria, please try choosing another class/book then press search.</p>
-							
-							
+
+
 
 
 							<?php
@@ -267,7 +267,7 @@ line-height: 1.5;"> Uh Oh! &#x1F626; <br>The content you are looking for is eith
 											<!-- <div class="col-lg-10 p-2 m-auto" style="background: greenyellow; height: 42px; text-align: center; top: 7px; font-size: 14px;">-->
 
 											<!--<a href="<?php //echo base_url(); 
-															?>query/teacher-question" target="_blank" style="color: #444;font-weight: 600;">Submit Your Question</a>-->
+																		?>query/teacher-question" target="_blank" style="color: #444;font-weight: 600;">Submit Your Question</a>-->
 
 											<!--</div> -->
 									</td>
