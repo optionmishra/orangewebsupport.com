@@ -10,7 +10,7 @@ body {
   font-family: "Lato", sans-serif;
 
   background-position: bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .backvideo{
@@ -21,10 +21,8 @@ body {
   top: 0;
   bottom: 0;
   z-index: -1;
-  background-position: bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+  width: 100vw;
+  height: 100vh;}
 
 .bakcolor{
 
@@ -222,6 +220,141 @@ footer {
   position: relative;
   box-shadow: 0px 0px 15px rgb(0 0 0 / 30%) !important;
 }
+.custom-card{
+
+min-height: 450px;
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 30%) !important;
+  margin: 1rem auto;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+
+
+}
+.card-header {
+  background-color: #e05e55; /* Bootstrap primary color */
+  color: white; /* White text color */
+  border-top-left-radius: 8px; /* Rounded corners */
+  border-top-right-radius: 8px; /* Rounded corners */
+}
+
+/* Notification Body */
+.notification-body {
+  max-height: 400px; /* Set maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 10px; /* Optional: Add some margin on top */
+}
+
+/* Notification List */
+.notification-list {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+/* Notification Item */
+.notification-item {
+  padding: 15px; /* Padding for each item */
+  border-bottom: 1px solid #e0e0e0; /* Divider between items */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+/* Blinking effect */
+@keyframes blink {
+  0% {
+      background-color: #d9ecfd; /* Initial highlight color */
+  }
+  50% {
+      background-color: #ffffff; /* Background color during blink */
+  }
+  100% {
+      background-color: #d9ecfd; /* Final highlight color */
+  }
+}
+
+/* Highlight the first notification item with blinking effect */
+.notification-item:first-child {
+  animation: blink 1s ease-in-out 10; /* 1 second duration, 3 times */
+  font-weight: bold; /* Make the text bold */
+  color: black;
+}
+/* Notification Description */
+.notification-description {
+  font-size: 14px; /* Smaller font size for descriptions */
+  color: #555; /* Dark gray color for descriptions */
+  margin-top: 5px; /* Space between title and description */
+}
+
+/* Hover effect for notification items */
+.notification-item:hover {
+  background-color: #f1f1f1; /* Change background on hover */
+}
+
+/* Remove bottom border for the last item */
+.notification-item:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+/* Base styles for custom card */
+/* Media query for devices with a max width of 1200px */
+@media (max-width: 1200px) {
+  .row.mt-4 {
+      flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .col-md-8, .col-md-4 {
+      width: 100%; /* Make both columns full width */
+      margin-bottom: 20px; /* Add space between the stacked cards */
+  }
+
+  .custom-card {
+      padding: 20px; /* Adjust padding for better spacing */
+      width: 80%;
+  }
+
+  .home-card {
+      padding: 20px; /* Adjust padding for the login card */
+  }
+
+  .email_pw input {
+      font-size: 16px; /* Adjust font size for inputs */
+  }
+
+  .btn {
+      width: 100%; /* Make buttons full width */
+  }
+}
+
+/* Media query for devices with a max width of 768px */
+@media (max-width: 768px) {
+  .custom-card {
+      margin-bottom: 20px; /* Add some space at the bottom */
+      width:40%; /* Ensure the card takes full width */
+  }
+
+  .home-card {
+      margin-bottom: 20px; /* Add space below the login card */
+  }
+}
+
+/* Media query for devices with a max width of 576px */
+@media (max-width: 576px) {
+  .custom-card {
+      padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .home-card {
+      padding: 15px; /* Ensure the login card has less padding */
+  }
+
+  .email_pw input {
+      font-size: 14px; /* Adjust font size for inputs */
+  }
+
+  .btn {
+      width: 100%; /* Make buttons full width */
+  }
+}
+
 /*  */
 .left-ill-img {
   max-width: 240px;
@@ -236,6 +369,10 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .home-card{
+
+    min-height: 750px;
+  }
   .wa-icon {
     bottom: 5px;
     right: 10px;

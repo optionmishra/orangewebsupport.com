@@ -11,6 +11,7 @@
 	<?php endforeach; ?>
 	<ul class="app-menu">
 		<li><a class="app-menu__item active" href="<?= base_url("superadmin/dashboard"); ?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+		<li><a class="app-menu__item" href="<?= base_url("superadmin/Notification"); ?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Notifications</span></a></li>
 		<li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="fa fa-user app-menu__icon" aria-hidden="true"></i> <span class="app-menu__label"> User</span><i class="treeview-indicator fa fa-angle-right"></i></a>
 			<ul class="treeview-menu">
 				<li><a href="superadmin/permission" class="treeview-item"> <i class="icon fa fa-key" aria-hidden="true"></i>Permission</a></li>
@@ -45,6 +46,7 @@
 			</ul>
 		</li>
 		<li><a class="app-menu__item" href="superadmin/content"><i class="fa fa-list app-menu__icon" aria-hidden="true"></i> <span class="app-menu__label"> Web Content</span></a>
+		<li><a class="app-menu__item" href="superadmin/content_update"><i class="fa fa-list app-menu__icon" aria-hidden="true"></i> <span class="app-menu__label">Digital Content Update</span></a>
 		<li class="treeview">
 
 			<a class="app-menu__item" href="superadmin/state"><i class="fa fa-graduation-cap app-menu__icon" aria-hidden="true"></i> <span class="app-menu__label"> States</span></a>

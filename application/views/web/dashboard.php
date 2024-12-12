@@ -78,7 +78,7 @@
 				<li class="breadcrumb-item">Class <?= $this->session->userdata('classes') ?></li>
 			<?php } ?>
 
-			<li class="breadcrumb-item"><?= $this->session->userdata('category_name') ?></li>
+			<li class="breadcrumb-item"><b><?= $this->session->userdata('category_name') ?></li></b></li>
 			<input type="text" id="active" value="<?= $this->session->userdata('category') ?>" class="d-none">
 		</ul>
 
@@ -170,32 +170,47 @@
 	</form>
 
 	<div class="row m-0 p-0">
-		<div class="col-lg-2 p-2 m-0 home-side">
-			<div class="wmain_sidebar">
-				<?php
-				$userdata = $this->session->userdata();
+  <div class="col-lg-2 p-2 m-0 home-side">
+  <div class="iphone_frame">
+  <div class="iphone_back_frame">
+    <div class="wmain_sidebar">
+      <ul class="category-list">
+        <?php
+          $userdata = $this->session->userdata();
+          $current_subject = $this->session->userdata('msubject');
+          $current_class = $this->session->userdata('classes');
 
-				?>
-				<ul>
-				<?php
-					foreach ($category as $cat) {
+          foreach ($category as $cat) {
+            $has_entries = $this->db->where('msubject', $current_subject)
+              ->where('classes', $current_class)
+              ->where('type', $cat->id)
+              ->count_all_results('websupport');
+
+            if ($cat->allow == 'Both' or $cat->allow == $userdata['type']) {
+              if ($has_entries == 0 || $has_entries == null) {
+                continue;
+              }
+        ?>
+        <li class="category-item" id="active<?= $cat->id ?>">
+          <a tab_id="<?= $cat->id ?>" class="new-search">
+            <img src="<?= $cat->image ?>" class="image_iphone_icon">
+			<span class="nametxt"> <?= $cat->name ?> </span>
+          </a>
+		 
+        </li>
+        <?php
+            }
+          }
+        ?>
+      </ul>
+    </div>
+  </div>
+ 
+</div>
+  </div>
 
 
-						if ($cat->allow == 'Both' or $cat->allow == $userdata['type']) {
-					?>
-							<li class="active<?= $cat->id ?>" id="active<?= $cat->id ?>">
-							<a tab_id="<?= $cat->id ?>" class="new-search">
-							<img src="<?= $cat->image ?>" class="image<?= $cat->id ?>">
-							<?= $cat->name ?>
-							</a>
-							</li>
-					<?php
-						}
-					}
-					?>
-				</ul>
-			</div>
-		</div>
+	
 		<div class="col-lg-10 m-0 p-3">
 
 			<div class="row">
@@ -207,13 +222,19 @@
 						</tr>
 					</thead>
 					<tbody class="row">
-						<?php if (empty($default)) { ?>
+						<?php
+						
+						if (empty($default)) { ?>
 							<p class="text-danger m-3" style="
 							font-weight: normal;
 font-size: 20px;
 width: 50%;
 padding: 4rem 0;
 line-height: 1.5;"> Uh Oh! &#x1F626; <br>The content you are looking for is either under process or not available for the selected criteria, please try choosing another class/book then press search.</p>
+							
+							
+
+
 							<?php
 						} else {
 							foreach ($default as $def) :
@@ -312,4 +333,7 @@ line-height: 1.5;"> Uh Oh! &#x1F626; <br>The content you are looking for is eith
 			$('#select_classes').html(classOptions);
 		});
 	});
+</script>
+<script>
+
 </script>

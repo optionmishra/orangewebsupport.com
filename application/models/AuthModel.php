@@ -1378,6 +1378,7 @@ class AuthModel extends CI_Model
 
 	function create_classes($data)
 	{
+
 		$res = $this->db->insert('classes', $data);
 		if (!$res) {
 			$this->error = $this->db->error()['message'];
@@ -2053,5 +2054,55 @@ class AuthModel extends CI_Model
 
 
 		return $categories;
+	}
+	function content_update($websupport)
+	{
+		$this->db->select('*');  // Select all columns
+		$this->db->from('websupport');  // From the 'websupport' table
+		$query = $this->db->get();  // Execute the query
+		$result = $query->result_array();  // Get the result as an array
+		return $result;  // Return the result
+	}
+
+
+	function create_notification($data)
+	{
+		$res = $this->db->insert('notifications', $data);
+		if (!$res) {
+			$this->error = $this->db->error()['message'];
+			return FALSE;
+		} else {
+			return TRUE;
+		}
+	}
+
+	// Update Notification
+	public function update_notification($data, $id)
+	{
+		$this->db->where('id', $id);
+		$res = $this->db->update('notifications', $data);
+
+		if (!$res) {
+			$this->error = $this->db->error()['message']; // Capture the error message
+			return FALSE; // Return FALSE if the update fails
+		}
+
+		return TRUE; // Return TRUE if the update is successful
+	}
+	// Get Notifications
+	function get_notifications($id = null)
+	{
+		if (!empty($id)) {
+			$this->db->where('id', $id);
+		}
+		$res =  $this->db->get('notifications')->result();
+		return $res;
+	}
+
+	// Delete Notification
+	public function delete_notification($id)
+	{
+		$this->db->where('id', $id);
+		return $this->db->delete('notifications');
 	}
 }
