@@ -579,7 +579,9 @@
 <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#srch_tbl').DataTable();
+        $('#srch_tbl').DataTable({
+            ordering: false
+        });
     });
 </script>
 <!--<script>
