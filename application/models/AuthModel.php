@@ -1469,101 +1469,101 @@ class AuthModel extends CI_Model
 	// 		return $res;
 	// 	}
 	// }
-	function check_subjective($class, $section, $teachercode, $date, $date2, $paper_mode)
-	{
-		// $this->db->select('id');
-		$this->db->where('class_name', $class);
-		$this->db->where('section_name', $section);
-		$this->db->where('teacher_code', $teachercode);
-		$this->db->where('paper_mode', $paper_mode);
-		// $this->db->like('paper_mode', 'subjective');
-		$this->db->where('date_start >=', $date);
-		$this->db->where('date_end <=', $date2);
-		$this->db->where('status', '1');
-		$res = $this->db->get('paper_assign')->row_array();
+	// function check_subjective($class, $section, $teachercode, $date, $date2, $paper_mode)
+	// {
+	// 	// $this->db->select('id');
+	// 	$this->db->where('class_name', $class);
+	// 	$this->db->where('section_name', $section);
+	// 	$this->db->where('teacher_code', $teachercode);
+	// 	$this->db->where('paper_mode', $paper_mode);
+	// 	// $this->db->like('paper_mode', 'subjective');
+	// 	$this->db->where('date_start >=', $date);
+	// 	$this->db->where('date_end <=', $date2);
+	// 	$this->db->where('status', '1');
+	// 	$res = $this->db->get('paper_assign')->row_array();
 
-		if (!$res) {
-			return FALSE;
-		} else {
-			return $res;
-		}
-	}
+	// 	if (!$res) {
+	// 		return FALSE;
+	// 	} else {
+	// 		return $res;
+	// 	}
+	// }
 
-	function check_objective($class, $section, $teachercode, $date, $date2, $paper_mode)
-	{
+	// function check_objective($class, $section, $teachercode, $date, $date2, $paper_mode)
+	// {
 
-		// $this->db->select('id');
-		$this->db->where('class_name', $class);
-		$this->db->where('section_name', $section);
-		$this->db->where('teacher_code', $teachercode);
-		$this->db->where('paper_mode', $paper_mode);
-		$this->db->where('date_start >=', $date);
-		$this->db->where('date_end <=', $date2);
-		$this->db->where('status', '1');
-		$res = $this->db->get('paper_assign')->row_array();
-		if (!$res) {
-			return FALSE;
-		} else {
-			return $res;
-		}
-	}
+	// 	// $this->db->select('id');
+	// 	$this->db->where('class_name', $class);
+	// 	$this->db->where('section_name', $section);
+	// 	$this->db->where('teacher_code', $teachercode);
+	// 	$this->db->where('paper_mode', $paper_mode);
+	// 	$this->db->where('date_start >=', $date);
+	// 	$this->db->where('date_end <=', $date2);
+	// 	$this->db->where('status', '1');
+	// 	$res = $this->db->get('paper_assign')->row_array();
+	// 	if (!$res) {
+	// 		return FALSE;
+	// 	} else {
+	// 		return $res;
+	// 	}
+	// }
 
-	function check_subjective_submission($class, $section, $teachercode, $assignid, $paper_mode)
-	{
+	// function check_subjective_submission($class, $section, $teachercode, $assignid, $paper_mode)
+	// {
 
-		$this->db->where('assign_id', $assignid);
-		$this->db->where('student_class', $class);
-		$this->db->where('student_section', $section);
-		$this->db->where('student_code', $teachercode);
-		$this->db->where('paper_mode', $paper_mode);
-		$res = $this->db->get('paper_submision')->row_array();
-		if (!$res) {
-			return '1';
-		} else {
-			return '0';
-		}
-	}
+	// 	$this->db->where('assign_id', $assignid);
+	// 	$this->db->where('student_class', $class);
+	// 	$this->db->where('student_section', $section);
+	// 	$this->db->where('student_code', $teachercode);
+	// 	$this->db->where('paper_mode', $paper_mode);
+	// 	$res = $this->db->get('paper_submision')->row_array();
+	// 	if (!$res) {
+	// 		return '1';
+	// 	} else {
+	// 		return '0';
+	// 	}
+	// }
 
-	function check_objective_submission($class, $section, $teachercode, $assignid, $paper_mode)
-	{
+	// function check_objective_submission($class, $section, $teachercode, $assignid, $paper_mode)
+	// {
 
-		$this->db->where('assign_id', $assignid);
-		$this->db->where('student_class', $class);
-		$this->db->where('student_section', $section);
-		$this->db->where('student_code', $teachercode);
-		$this->db->where('paper_mode', $paper_mode);
-		$res = $this->db->get('paper_submision')->row_array();
-		if (!$res) {
-			return '1';
-		} else {
-			return '0';
-		}
-	}
+	// 	$this->db->where('assign_id', $assignid);
+	// 	$this->db->where('student_class', $class);
+	// 	$this->db->where('student_section', $section);
+	// 	$this->db->where('student_code', $teachercode);
+	// 	$this->db->where('paper_mode', $paper_mode);
+	// 	$res = $this->db->get('paper_submision')->row_array();
+	// 	if (!$res) {
+	// 		return '1';
+	// 	} else {
+	// 		return '0';
+	// 	}
+	// }
 
-	function check_paper_summative($id)
-	{
+	// function check_paper_summative($id)
+	// {
 
-		$this->db->where('student_id', $id);
-		$this->db->where('paper_mode', 'subjective');
-		$res = $this->db->get('paper_submision')->result();
-		if ($res->num_rows() == 1) {
-			return '0';
-		} else {
-			return '1';
-		}
-	}
+	// 	$this->db->where('student_id', $id);
+	// 	$this->db->where('paper_mode', 'subjective');
+	// 	$res = $this->db->get('paper_submision')->result();
+	// 	if ($res->num_rows() == 1) {
+	// 		return '0';
+	// 	} else {
+	// 		return '1';
+	// 	}
+	// }
 
-	function check_paper_objective($id)
-	{
-		$this->db->where('student_id', $id);
-		$this->db->where('paper_mode', 'objective');
-		$res = $this->db->get('paper_submision')->result();
-		if ($res->num_rows() == 1) {
-			return '0';
-		} else {
-			return '1';
-		}
-	}
+	// function check_paper_objective($id)
+	// {
+	// 	$this->db->where('student_id', $id);
+	// 	$this->db->where('paper_mode', 'objective');
+	// 	$res = $this->db->get('paper_submision')->result();
+	// 	if ($res->num_rows() == 1) {
+	// 		return '0';
+	// 	} else {
+	// 		return '1';
+	// 	}
+	// }
 
 	function classesSection()
 	{
@@ -1705,6 +1705,7 @@ class AuthModel extends CI_Model
 			$this->db->where('msubject', $this->session->userdata('main_subject'));
 		}
 		$this->db->where('type', $this->session->userdata('category'));
+		$this->db->order_by('title', 'asc');
 		$query = $this->db->get('websupport')->result();
 
 		//echo $this->db->last_query();
@@ -2104,5 +2105,57 @@ class AuthModel extends CI_Model
 	{
 		$this->db->where('id', $id);
 		return $this->db->delete('notifications');
+	}
+
+	/**
+	 * Check if subjective test exists and is valid
+	 */
+	public function check_subjective($class, $section, $teachercode, $date, $date2, $paper_mode)
+	{
+		$query = $this->db->where([
+			'class_name' => $class,
+			'section_name' => $section,
+			'teacher_code' => $teachercode,
+			'paper_mode' => $paper_mode,
+			'status' => '1'
+		])
+			->where('date_start >=', $date)
+			->where('date_end <=', $date2)
+			->get('paper_assign');
+
+		return $query->row_array() ?: FALSE;
+	}
+
+	/**
+	 * Check if objective test exists and is valid
+	 */
+	public function check_objective($class, $section, $teachercode, $date, $date2, $paper_mode)
+	{
+		return $this->check_subjective($class, $section, $teachercode, $date, $date2, $paper_mode);
+	}
+
+	/**
+	 * Check if subjective test has been submitted
+	 */
+	public function check_subjective_submission($class, $section, $teachercode, $assignid, $paper_mode)
+	{
+		$query = $this->db->where([
+			'assign_id' => $assignid,
+			'student_class' => $class,
+			'student_section' => $section,
+			'student_code' => $teachercode,
+			'paper_mode' => $paper_mode
+		])
+			->get('paper_submision');
+
+		return $query->row_array() ? '0' : '1';
+	}
+
+	/**
+	 * Check if objective test has been submitted
+	 */
+	public function check_objective_submission($class, $section, $teachercode, $assignid, $paper_mode)
+	{
+		return $this->check_subjective_submission($class, $section, $teachercode, $assignid, $paper_mode);
 	}
 }

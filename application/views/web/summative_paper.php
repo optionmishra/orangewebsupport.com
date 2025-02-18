@@ -191,12 +191,12 @@
 			}
 		</script>
 	<?php } else { ?>
-		<?php redirect(base_url('web/student_panel')) ?>
+		<?php redirect(base_url('studentPanel/student_panel')) ?>
 
 		<!-- <h3 style="color: red;text-align: center;"><?php # echo $msg 
-														?></h3>
+																										?></h3>
 		<a href="<? # base_url('dashboard') 
-					?>" style="float: inline-end;text-align: center;">Back to home</a> -->
+							?>" style="float: inline-end;text-align: center;">Back to home</a> -->
 	<?php } ?>
 </body>
 

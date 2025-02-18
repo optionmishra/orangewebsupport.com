@@ -179,7 +179,7 @@
 			}
 		</script>
 	<?php } else { ?>
-		<?php redirect(base_url('web/student_panel')) ?>
+		<?php redirect(base_url('studentPanel/student_panel')) ?>
 	<?php } ?>
 </body>
 

@@ -23,7 +23,7 @@ class Web extends CI_Controller
 		$this->load->model('WebModel');
 		$this->siteName = 'touchpadwebsupport.com';
 		//Ckeditor's configuration
-	} 
+	}
 
 	function message($type, $msg, $data = null)
 	{
@@ -457,161 +457,161 @@ class Web extends CI_Controller
 		}
 	}
 
-	public function student_panel()
-	{
-		if (!$this->session->userdata('username')) {
-			header("location:" . base_url('web/logout'));
-		} else {
-			$student_code = $this->session->userdata('stu_teacher_code');
-			$date = date("Y-m-d");
-			$date2 = date('Y-m-d', strtotime($date . " + 1 day"));
+	// public function student_panel()
+	// {
+	// 	if (!$this->session->userdata('username')) {
+	// 		header("location:" . base_url('web/logout'));
+	// 	} else {
+	// 		$student_code = $this->session->userdata('stu_teacher_code');
+	// 		$date = date("Y-m-d");
+	// 		$date2 = date('Y-m-d', strtotime($date . " + 1 day"));
 
-			$checkpaper = $this->AuthModel->check_class_paper($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2);
-			if ($checkpaper) {
+	// 		$checkpaper = $this->AuthModel->check_class_paper($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2);
+	// 		if ($checkpaper) {
 
-				$check_subjective_1 = $this->AuthModel->check_subjective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '21');
-				$check_subjective_2 = $this->AuthModel->check_subjective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '22');
+	// 			$check_subjective_1 = $this->AuthModel->check_subjective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '21');
+	// 			$check_subjective_2 = $this->AuthModel->check_subjective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '22');
 
-				$check_objective_1 = $this->AuthModel->check_objective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '11');
-				$check_objective_2 = $this->AuthModel->check_objective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '12');
-				$check_objective_3 = $this->AuthModel->check_objective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '13');
-				$check_objective_4 = $this->AuthModel->check_objective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '14');
+	// 			$check_objective_1 = $this->AuthModel->check_objective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '11');
+	// 			$check_objective_2 = $this->AuthModel->check_objective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '12');
+	// 			$check_objective_3 = $this->AuthModel->check_objective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '13');
+	// 			$check_objective_4 = $this->AuthModel->check_objective($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $date, $date2, '14');
 
-				$sub1_date = $check_subjective_1['date_end'];
-				$sub2_date = $check_subjective_2['date_end'];
-				$ob1_date = $check_objective_1['date_end'];
-				$ob2_date = $check_objective_2['date_end'];
-				$ob3_date = $check_objective_3['date_end'];
-				$ob4_date = $check_objective_4['date_end'];
+	// 			$sub1_date = $check_subjective_1['date_end'];
+	// 			$sub2_date = $check_subjective_2['date_end'];
+	// 			$ob1_date = $check_objective_1['date_end'];
+	// 			$ob2_date = $check_objective_2['date_end'];
+	// 			$ob3_date = $check_objective_3['date_end'];
+	// 			$ob4_date = $check_objective_4['date_end'];
 
-				if ($check_subjective_1) {
-					$assignid_test1 = $check_subjective_1['id'];
-					$subjective_test1 = $this->AuthModel->check_subjective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid_test1, '21');
-					if (!$subjective_test1) {
-						// } else {
-						$msg = 'You are already Done! Thank You.';
-						$subjective_test1 = '';
-					}
-				}
-				if ($check_subjective_2) {
-					$assignid_test2 = $check_subjective_2['id'];
-					$subjective_test2 = $this->AuthModel->check_subjective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid_test2, '22');
-					if (!$subjective_test2) {
-						// } else {
-						$msg = 'You are already Done! Thank You.';
-						$subjective_test2 = '';
-					}
-				}
-				// else {
+	// 			if ($check_subjective_1) {
+	// 				$assignid_test1 = $check_subjective_1['id'];
+	// 				$subjective_test1 = $this->AuthModel->check_subjective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid_test1, '21');
+	// 				if (!$subjective_test1) {
+	// 					// } else {
+	// 					$msg = 'You are already Done! Thank You.';
+	// 					$subjective_test1 = '';
+	// 				}
+	// 			}
+	// 			if ($check_subjective_2) {
+	// 				$assignid_test2 = $check_subjective_2['id'];
+	// 				$subjective_test2 = $this->AuthModel->check_subjective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid_test2, '22');
+	// 				if (!$subjective_test2) {
+	// 					// } else {
+	// 					$msg = 'You are already Done! Thank You.';
+	// 					$subjective_test2 = '';
+	// 				}
+	// 			}
+	// 			// else {
 
-				// 	$subjective = '';
-				// 	$msg = 'You are already Done! Thank You.';
-				// 	// $msg = 'Your Paper will be started on:- ';
-				// }
-				if ($check_objective_1) {
+	// 			// 	$subjective = '';
+	// 			// 	$msg = 'You are already Done! Thank You.';
+	// 			// 	// $msg = 'Your Paper will be started on:- ';
+	// 			// }
+	// 			if ($check_objective_1) {
 
-					$assignid2_1 = $check_objective_1['id'];
-					$objective_test1 = $this->AuthModel->check_objective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid2_1, '11');
-					if (!$objective_test1) {
-						// } else {
-						$msg = 'You are already Done! Thank You.';
-						$objective_test1 = '';
-					}
-				} else {
+	// 				$assignid2_1 = $check_objective_1['id'];
+	// 				$objective_test1 = $this->AuthModel->check_objective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid2_1, '11');
+	// 				if (!$objective_test1) {
+	// 					// } else {
+	// 					$msg = 'You are already Done! Thank You.';
+	// 					$objective_test1 = '';
+	// 				}
+	// 			} else {
 
-					$objective_test1 = '';
-					$msg = 'You are already Done! Thank You.';
-					// $msg = 'Your Paper will be started on:- ';
-				}
-				if ($check_objective_2) {
+	// 				$objective_test1 = '';
+	// 				$msg = 'You are already Done! Thank You.';
+	// 				// $msg = 'Your Paper will be started on:- ';
+	// 			}
+	// 			if ($check_objective_2) {
 
-					$assignid2_2 = $check_objective_2['id'];
-					$objective_test2 = $this->AuthModel->check_objective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid2_2, '12');
-					if (!$objective_test2) {
-						// } else {
-						$msg = 'You are already Done! Thank You.';
-						$objective_test2 = '';
-					}
-				} else {
+	// 				$assignid2_2 = $check_objective_2['id'];
+	// 				$objective_test2 = $this->AuthModel->check_objective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid2_2, '12');
+	// 				if (!$objective_test2) {
+	// 					// } else {
+	// 					$msg = 'You are already Done! Thank You.';
+	// 					$objective_test2 = '';
+	// 				}
+	// 			} else {
 
-					$objective = '';
-					$msg = 'You are already Done! Thank You.';
-					// $msg = 'Your Paper will be started on:- ';
-				}
-				if ($check_objective_3) {
+	// 				$objective = '';
+	// 				$msg = 'You are already Done! Thank You.';
+	// 				// $msg = 'Your Paper will be started on:- ';
+	// 			}
+	// 			if ($check_objective_3) {
 
-					$assignid2_3 = $check_objective_3['id'];
-					$objective_test3 = $this->AuthModel->check_objective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid2_3, '13');
-					if (!$objective_test3) {
-						// } else {
-						$msg = 'You are already Done! Thank You.';
-						$objective_test3 = '';
-					}
-				} else {
+	// 				$assignid2_3 = $check_objective_3['id'];
+	// 				$objective_test3 = $this->AuthModel->check_objective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid2_3, '13');
+	// 				if (!$objective_test3) {
+	// 					// } else {
+	// 					$msg = 'You are already Done! Thank You.';
+	// 					$objective_test3 = '';
+	// 				}
+	// 			} else {
 
-					$objective = '';
-					$msg = 'You are already Done! Thank You.';
-					// $msg = 'Your Paper will be started on:- ';
-				}
-				if ($check_objective_4) {
+	// 				$objective = '';
+	// 				$msg = 'You are already Done! Thank You.';
+	// 				// $msg = 'Your Paper will be started on:- ';
+	// 			}
+	// 			if ($check_objective_4) {
 
-					$assignid2_4 = $check_objective_4['id'];
-					$objective_test4 = $this->AuthModel->check_objective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid2_4, '14');
-					if (!$objective_test4) {
-						// } else {
-						$msg = 'You are already Done! Thank You.';
-						$objective_test4 = '';
-					}
-				} else {
+	// 				$assignid2_4 = $check_objective_4['id'];
+	// 				$objective_test4 = $this->AuthModel->check_objective_submission($this->session->userdata('classes'), $this->session->userdata('section'), $student_code, $assignid2_4, '14');
+	// 				if (!$objective_test4) {
+	// 					// } else {
+	// 					$msg = 'You are already Done! Thank You.';
+	// 					$objective_test4 = '';
+	// 				}
+	// 			} else {
 
-					$objective = '';
-					$msg = 'You are already Done! Thank You.';
-					// $msg = 'Your Paper will be started on:- ';
-				}
-			} else {
-				$subjective_test1 = '';
-				$subjective_test2 = '';
-				$objective_test1 = '';
-				$objective_test2 = '';
-				$objective_test3 = '';
-				$objective_test4 = '';
-				$msg = 'No test has been assigned yet';
-			}
+	// 				$objective = '';
+	// 				$msg = 'You are already Done! Thank You.';
+	// 				// $msg = 'Your Paper will be started on:- ';
+	// 			}
+	// 		} else {
+	// 			$subjective_test1 = '';
+	// 			$subjective_test2 = '';
+	// 			$objective_test1 = '';
+	// 			$objective_test2 = '';
+	// 			$objective_test3 = '';
+	// 			$objective_test4 = '';
+	// 			$msg = 'No test has been assigned yet';
+	// 		}
 
-			$data = [
-				'title' => 'Student Panel',
-				'page' => 'Student panel',
-				'logo' => $this->AuthModel->content_row('Logo'),
-				'logo1' => $this->AuthModel->content_row('Logo_index'),
-				'mobile1' => $this->AuthModel->content('Mobile1'),
-				'mobile2' => $this->AuthModel->content('Mobile2'),
-				'email1' => $this->AuthModel->content('Email1'),
-				'email2' => $this->AuthModel->content('Email2'),
-				'address' => $this->AuthModel->content('Address'),
-				'copyright' => $this->AuthModel->content('Copyright'),
-				'user' => $this->WebModel->Webuser(),
-				'classes' => $this->AuthModel->classes_teacher($this->session->userdata('classes')),
-				'subjective_test1' => $subjective_test1,
-				'subjective_test2' => $subjective_test2,
-				'objective_test1' => $objective_test1,
-				'objective_test2' => $objective_test2,
-				'objective_test3' => $objective_test3,
-				'objective_test4' => $objective_test4,
-				'msg' => $msg,
-				'sub1_date' => $sub1_date,
-				'sub2_date' => $sub2_date,
-				'ob1_date' => $ob1_date,
-				'ob2_date' => $ob2_date,
-				'ob3_date' => $ob3_date,
-				'ob4_date' => $ob4_date,
-			];
-			// echo var_dump($this->session->userdata());
-			// exit();
-			$this->load->view('globals/web/header', $data);
-			$this->load->view('web/student_panel');
-			$this->load->view('globals/web/footer', $data);
-		}
-	}
+	// 		$data = [
+	// 			'title' => 'Student Panel',
+	// 			'page' => 'Student panel',
+	// 			'logo' => $this->AuthModel->content_row('Logo'),
+	// 			'logo1' => $this->AuthModel->content_row('Logo_index'),
+	// 			'mobile1' => $this->AuthModel->content('Mobile1'),
+	// 			'mobile2' => $this->AuthModel->content('Mobile2'),
+	// 			'email1' => $this->AuthModel->content('Email1'),
+	// 			'email2' => $this->AuthModel->content('Email2'),
+	// 			'address' => $this->AuthModel->content('Address'),
+	// 			'copyright' => $this->AuthModel->content('Copyright'),
+	// 			'user' => $this->WebModel->Webuser(),
+	// 			'classes' => $this->AuthModel->classes_teacher($this->session->userdata('classes')),
+	// 			'subjective_test1' => $subjective_test1,
+	// 			'subjective_test2' => $subjective_test2,
+	// 			'objective_test1' => $objective_test1,
+	// 			'objective_test2' => $objective_test2,
+	// 			'objective_test3' => $objective_test3,
+	// 			'objective_test4' => $objective_test4,
+	// 			'msg' => $msg,
+	// 			'sub1_date' => $sub1_date,
+	// 			'sub2_date' => $sub2_date,
+	// 			'ob1_date' => $ob1_date,
+	// 			'ob2_date' => $ob2_date,
+	// 			'ob3_date' => $ob3_date,
+	// 			'ob4_date' => $ob4_date,
+	// 		];
+	// 		// echo var_dump($this->session->userdata());
+	// 		// exit();
+	// 		$this->load->view('globals/web/header', $data);
+	// 		$this->load->view('web/student_panel');
+	// 		$this->load->view('globals/web/footer', $data);
+	// 	}
+	// }
 
 	public function subjective_paper()
 	{
@@ -976,10 +976,10 @@ class Web extends CI_Controller
 			header("location:" . base_url() . 'dashboard');
 		}
 	}
-	public function test_db_connection() {
+	public function test_db_connection()
+	{
 		$this->load->model('WebModel');
 		$notifications = $this->WebModel->get_notifications();
 		var_dump($notifications); // This will output the notifications
 	}
-
 }

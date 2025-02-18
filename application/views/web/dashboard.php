@@ -90,7 +90,8 @@
 				<a href="web/teacher_panel" class="btn btn-primary ttl-btn">
 					<img src="<?= base_url('/images/test/minilms.png') ?>" alt="Teacher Image" class="img-btn">Teacher Section</a>
 			<?php else : ?>
-				<a href="web/student_panel" class="btn btn-primary ttl-btn">Student Section &nbsp </a>
+				<!-- <a href="web/student_panel" class="btn btn-primary ttl-btn">Student Section &nbsp </a> -->
+				<a href="studentPanel/student_panel" class="btn btn-primary ttl-btn">Student Section &nbsp </a>
 			<?php endif; ?>
 		<?php endif; ?>
 		<?php /*

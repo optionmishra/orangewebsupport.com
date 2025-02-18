@@ -23,7 +23,8 @@ class Admin_master extends CI_Controller
 		$this->load->library('upload');
 		$this->load->library('email');
 		$this->load->library('excel');
-		// $this->orange_epoch = $this->load->database('orange_epoch', TRUE);
+		if ($_SERVER['HTTP_HOST'] != 'localhost')
+			$this->orange_epoch = $this->load->database('orange_epoch', TRUE);
 	}
 
 	// classes start
@@ -1644,10 +1645,11 @@ class Admin_master extends CI_Controller
 
 			if (!$res) {
 				// $this->message('error', $this->AuthModel->error);
-				redirect('web/student_panel');
+				// redirect('web/student_panel');	
+				redirect('studentPanel/student_panel');
 			}
 			// $this->message('success', $this->input->post('name') . ' Test Assign Create Successfully....');
-			redirect('web/student_panel');
+			redirect('studentPanel/student_panel');
 		}
 	}
 
@@ -3587,65 +3589,63 @@ class Admin_master extends CI_Controller
 
 
 	function add_notification()
-{
-    // Skip permission check
-    if ($this->permission->is_allow('New Notification')) {
-    
-    $data = [
-        'title' => $this->input->post('title'),
-        'description' => $this->input->post('description'),
-    ];
-    
-    log_message('debug', 'Notification Data: ' . print_r($data, true));
-    
-    $res = $this->AuthModel->create_notification($data);
-    
-    if (!$res) {
-        log_message('error', 'Error creating notification: ' . $this->AuthModel->error);
-        $this->message('error', $this->AuthModel->error);
-    } else {
-        $this->message('success', 'Notification created successfully.');
-		redirect('admin_master/add_notification');
-    }
+	{
+		// Skip permission check
+		if ($this->permission->is_allow('New Notification')) {
 
-    } else {
-        $this->message('error', 'Permission Denied.');
-    }
-}
+			$data = [
+				'title' => $this->input->post('title'),
+				'description' => $this->input->post('description'),
+			];
+
+			log_message('debug', 'Notification Data: ' . print_r($data, true));
+
+			$res = $this->AuthModel->create_notification($data);
+
+			if (!$res) {
+				log_message('error', 'Error creating notification: ' . $this->AuthModel->error);
+				$this->message('error', $this->AuthModel->error);
+			} else {
+				$this->message('success', 'Notification created successfully.');
+				redirect('admin_master/add_notification');
+			}
+		} else {
+			$this->message('error', 'Permission Denied.');
+		}
+	}
 	// Update Notification
 	public function update_notification()
-{
-    // Uncomment this line if you want to check for permissions
-    if ($this->permission->is_allow('Update Notification')) {
-        
-    // Get the ID of the notification to update
-    $id = $this->input->post('id');
-    
-    // Prepare the data to update
-    $details = [
-        'title' => $this->input->post('title'),
-        'description' => $this->input->post('description')
-    ];
+	{
+		// Uncomment this line if you want to check for permissions
+		if ($this->permission->is_allow('Update Notification')) {
 
-    // Log the data for debugging
-    log_message('debug', 'Updating notification ID: ' . $id . ' with data: ' . print_r($details, true));
+			// Get the ID of the notification to update
+			$id = $this->input->post('id');
 
-    // Call the model method to update the notification
-    $res = $this->AuthModel->update_notification($details, $id);
-    
-    // Check if the update was successful
-    if (!$res) {
-        // Set an error message if the update failed
-        $this->message('error', $this->AuthModel->error);
-    } else {
-        // Set a success message if the update was successful
-        $this->message('success', 'Notification updated successfully.');
-    }
+			// Prepare the data to update
+			$details = [
+				'title' => $this->input->post('title'),
+				'description' => $this->input->post('description')
+			];
 
-    } else {
-        $this->message('error', 'Permission Denied.');
-    }
-}
+			// Log the data for debugging
+			log_message('debug', 'Updating notification ID: ' . $id . ' with data: ' . print_r($details, true));
+
+			// Call the model method to update the notification
+			$res = $this->AuthModel->update_notification($details, $id);
+
+			// Check if the update was successful
+			if (!$res) {
+				// Set an error message if the update failed
+				$this->message('error', $this->AuthModel->error);
+			} else {
+				// Set a success message if the update was successful
+				$this->message('success', 'Notification updated successfully.');
+			}
+		} else {
+			$this->message('error', 'Permission Denied.');
+		}
+	}
 	// Delete Notification
 	function delete_notification()
 	{
@@ -3659,13 +3659,12 @@ class Admin_master extends CI_Controller
 		} else {
 			$this->message('error', 'Permission Denied.');
 		}
-		
 	}
-	
+
 	// Retrieve Notifications
 	function notifications()
 	{
-		
+
 		$res = $this->AuthModel->get_notifications();
 		$i = 1;
 		foreach ($res as $key => &$value) {
@@ -3676,8 +3675,4 @@ class Admin_master extends CI_Controller
 		}
 		$this->message('success', '', $res);
 	}
-
-
-
-
 }
