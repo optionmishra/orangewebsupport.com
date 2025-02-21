@@ -504,6 +504,11 @@ class Web extends CI_Controller
 
 			$subjective = $this->AuthModel->summativeQues($this->session->userdata('main_subject'), $this->session->userdata('classes'), $paper_mode);
 
+			if (!$subjective) {
+				$this->session->set_flashdata('error', 'This Test is not available for selected series, Please change your selection in dashboard and try again.');
+				return redirect('studentPanel/student_panel');
+			}
+
 			$data = [
 				'title' => 'Subjective Question',
 				'page' => 'Subjective Question',
@@ -580,6 +585,10 @@ class Web extends CI_Controller
 				$this->session->userdata('classes'),
 				$paper_mode
 			);
+			if (!$objective) {
+				$this->session->set_flashdata('error', 'This Test is not available for selected series, Please change your selection in dashboard and try again.');
+				return redirect('studentPanel/student_panel');
+			}
 
 			$data = [
 				'title' => 'Objective Question',
