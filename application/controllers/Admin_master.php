@@ -1249,7 +1249,7 @@ class Admin_master extends CI_Controller
 
 		$this->db->where('id', $id);
 		$test_data = $this->db->get('paper_assign')->row_array();
-		$this->make_result($test_data);
+		// $this->make_result($test_data);
 
 		$res = $this->AuthModel->delete_record('paper_assign', 'id', $id);
 		$res = $this->AuthModel->delete_record('paper_submision', 'assign_id', $id);
