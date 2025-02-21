@@ -319,8 +319,15 @@
 	<div class="row py-3">
 		<div class="col-lg-12">
 			<div class="card mb-3 sp-card mt-3">
-				<div class="card-header">
-					Paper Assigned Set
+				<div class="card-header d-flex justify-content-between">
+					<div>
+						<span>Paper Assigned Set</span>
+					</div>
+					<?php if ($assigntest): ?>
+						<div>
+							<a class="btn btn-primary" href="<?= base_url('TestAvailabilityController/index') ?>" target="_blank">Student's Test Status</a>
+						</div>
+					<?php endif; ?>
 				</div>
 				<div class="card-body">
 					<div class="row">
