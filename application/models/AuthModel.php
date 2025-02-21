@@ -2108,9 +2108,9 @@ class AuthModel extends CI_Model
 	}
 
 	/**
-	 * Check if subjective test exists and is valid
+	 * Check if test exists and is valid
 	 */
-	public function check_subjective($class, $section, $teachercode, $date, $date2, $paper_mode)
+	public function checkAssignedTest($class, $section, $teachercode, $date, $date2, $paper_mode)
 	{
 		$query = $this->db->where([
 			'class_name' => $class,
@@ -2119,43 +2119,26 @@ class AuthModel extends CI_Model
 			'paper_mode' => $paper_mode,
 			'status' => '1'
 		])
-			->where('date_start >=', $date)
-			->where('date_end <=', $date2)
+			->where("(`date_start` <= '$date' OR `date_end` >= '$date2')")
 			->get('paper_assign');
 
-		return $query->row_array() ?: FALSE;
+		$test = $query->row_array() ?: FALSE;
+		return $test;
 	}
 
 	/**
-	 * Check if objective test exists and is valid
+	 * Check if test has been submitted
 	 */
-	public function check_objective($class, $section, $teachercode, $date, $date2, $paper_mode)
-	{
-		return $this->check_subjective($class, $section, $teachercode, $date, $date2, $paper_mode);
-	}
-
-	/**
-	 * Check if subjective test has been submitted
-	 */
-	public function check_subjective_submission($class, $section, $teachercode, $assignid, $paper_mode)
+	public function checkTestSubmitted($assignid, $student_id)
 	{
 		$query = $this->db->where([
 			'assign_id' => $assignid,
-			'student_class' => $class,
-			'student_section' => $section,
-			'student_code' => $teachercode,
-			'paper_mode' => $paper_mode
+			'student_id' => $student_id,
 		])
 			->get('paper_submision');
 
-		return $query->row_array() ? '0' : '1';
-	}
+		$submission = $query->row_array();
 
-	/**
-	 * Check if objective test has been submitted
-	 */
-	public function check_objective_submission($class, $section, $teachercode, $assignid, $paper_mode)
-	{
-		return $this->check_subjective_submission($class, $section, $teachercode, $assignid, $paper_mode);
+		return $submission ? TRUE : FALSE;
 	}
 }

@@ -21,6 +21,7 @@ class StudentPanel extends CI_Controller
     $this->load->model('AuthModel');
     $this->load->model('WebModel');
     $this->load->helper('url');
+    $this->load->model('TestAvailabilityModel');
   }
 
   /**
@@ -35,34 +36,36 @@ class StudentPanel extends CI_Controller
       return;
     }
 
-    // Get student information from session
-    $student_data = [
-      'code' => $this->session->userdata('stu_teacher_code'),
-      'class' => $this->session->userdata('classes'),
-      'section' => $this->session->userdata('section')
-    ];
+    // // Get student information from session
+    // $student_data = [
+    //   'id' => $this->session->userdata('user_id'),
+    //   'code' => $this->session->userdata('stu_teacher_code'),
+    //   'class' => $this->session->userdata('classes'),
+    //   'section' => $this->session->userdata('section'),
+    // ];
 
-    // Get date range for tests
-    $date_range = $this->getDateRange();
+    // // Get date range for tests
+    // $date_range = $this->getDateRange();
 
-    // Initialize test data
-    $test_data = $this->initializeTestData();
+    // // Initialize test data
+    // $test_data = $this->initializeTestData();
 
-    // Check if any papers are assigned
-    $has_papers = $this->AuthModel->check_class_paper(
-      $student_data['class'],
-      $student_data['section'],
-      $student_data['code'],
-      $date_range['start'],
-      $date_range['end']
-    );
+    // // Check if any papers are assigned
+    // // $has_papers = $this->AuthModel->check_class_paper(
+    // //   $student_data['class'],
+    // //   $student_data['section'],
+    // //   $student_data['code'],
+    // //   $date_range['start'],
+    // //   $date_range['end']
+    // // );
 
-    if ($has_papers) {
-      $test_data = $this->processTestData($student_data, $date_range);
-    }
+    // // if ($has_papers) {
+    // $test_data = $this->processTestData($student_data, $date_range);
+    // // }
 
     // Prepare view data
-    $view_data = $this->prepareViewData($test_data);
+    // $view_data = $this->prepareViewData($test_data);
+    $view_data = $this->prepareViewData();
 
     // Load views
     $this->loadViews($view_data);
@@ -144,7 +147,7 @@ class StudentPanel extends CI_Controller
    */
   private function processSubjectiveTest($student_data, $date_range, $mode, $key)
   {
-    $test = $this->AuthModel->check_subjective(
+    $test = $this->AuthModel->checkAssignedTest(
       $student_data['class'],
       $student_data['section'],
       $student_data['code'],
@@ -158,13 +161,14 @@ class StudentPanel extends CI_Controller
     }
 
     $submission = '';
-    if ($this->AuthModel->check_subjective_submission(
-      $student_data['class'],
-      $student_data['section'],
-      $student_data['code'],
+    if ($this->AuthModel->checkTestSubmitted(
+      // $student_data['class'],
+      // $student_data['section'],
+      // $student_data['code'],
       $test['id'],
-      $mode
-    ) === '1') {
+      // $mode,
+      $student_data['id']
+    ) === FALSE) {
       $submission = $test;
     }
 
@@ -179,7 +183,7 @@ class StudentPanel extends CI_Controller
    */
   private function processObjectiveTest($student_data, $date_range, $mode, $key)
   {
-    $test = $this->AuthModel->check_objective(
+    $test = $this->AuthModel->checkAssignedTest(
       $student_data['class'],
       $student_data['section'],
       $student_data['code'],
@@ -193,13 +197,14 @@ class StudentPanel extends CI_Controller
     }
 
     $submission = '';
-    if ($this->AuthModel->check_objective_submission(
-      $student_data['class'],
-      $student_data['section'],
-      $student_data['code'],
+    if ($this->AuthModel->checkTestSubmitted(
+      // $student_data['class'],
+      // $student_data['section'],
+      // $student_data['code'],
       $test['id'],
-      $mode
-    ) === '1') {
+      // $mode,
+      $student_data['id']
+    ) === FALSE) {
       $submission = $test;
     }
 
@@ -212,7 +217,7 @@ class StudentPanel extends CI_Controller
   /**
    * Prepare data for view
    */
-  private function prepareViewData($test_data)
+  private function prepareViewData()
   {
     return [
       'title' => 'Student Panel',
@@ -227,19 +232,20 @@ class StudentPanel extends CI_Controller
       'copyright' => $this->AuthModel->content('Copyright'),
       'user' => $this->WebModel->Webuser(),
       'classes' => $this->AuthModel->classes_teacher($this->session->userdata('classes')),
-      'subjective_test1' => $test_data['subjective']['test1']['data'],
-      'subjective_test2' => $test_data['subjective']['test2']['data'],
-      'objective_test1' => $test_data['objective']['test1']['data'],
-      'objective_test2' => $test_data['objective']['test2']['data'],
-      'objective_test3' => $test_data['objective']['test3']['data'],
-      'objective_test4' => $test_data['objective']['test4']['data'],
-      'msg' => $test_data['msg'],
-      'sub1_date' => $test_data['subjective']['test1']['date'],
-      'sub2_date' => $test_data['subjective']['test2']['date'],
-      'ob1_date' => $test_data['objective']['test1']['date'],
-      'ob2_date' => $test_data['objective']['test2']['date'],
-      'ob3_date' => $test_data['objective']['test3']['date'],
-      'ob4_date' => $test_data['objective']['test4']['date']
+      // 'subjective_test1' => $test_data['subjective']['test1']['data'],
+      // 'subjective_test2' => $test_data['subjective']['test2']['data'],
+      // 'objective_test1' => $test_data['objective']['test1']['data'],
+      // 'objective_test2' => $test_data['objective']['test2']['data'],
+      // 'objective_test3' => $test_data['objective']['test3']['data'],
+      // 'objective_test4' => $test_data['objective']['test4']['data'],
+      // 'msg' => $test_data['msg'],
+      // 'sub1_date' => $test_data['subjective']['test1']['date'],
+      // 'sub2_date' => $test_data['subjective']['test2']['date'],
+      // 'ob1_date' => $test_data['objective']['test1']['date'],
+      // 'ob2_date' => $test_data['objective']['test2']['date'],
+      // 'ob3_date' => $test_data['objective']['test3']['date'],
+      // 'ob4_date' => $test_data['objective']['test4']['date'],
+      'tests' => $this->TestAvailabilityModel->getStudentPanelTests($this->session->userdata('username'))
     ];
   }
 
