@@ -158,7 +158,7 @@ class TestAvailabilityModel extends CI_Model
 
   public function getStudentPanelTests($studentEmail)
   {
-    $this->db->select('id, stu_teacher_id, fullname as student_name, classes as class_name, class_section as section_name');
+    $this->db->select('id, stu_teacher_id, fullname as student_name, classes as class_id, class_section as section_id');
     $this->db->from('web_user');
     $this->db->where('email', $studentEmail);
     $this->db->where('status', 1);
