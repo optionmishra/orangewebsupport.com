@@ -18,11 +18,14 @@ class TestAvailabilityModel extends CI_Model
     // echo var_dump($this->session->userdata());
 
     // First get all students for this teacher
-    $this->db->select('id, stu_teacher_id, fullname as student_name, classes as class_name, class_section as section_name, email');
-    $this->db->from('web_user');
-    $this->db->where('stu_teacher_id', $teacher_code);
-    $this->db->where('user_type', 'student');
-    $this->db->where('status', 1);
+    $this->db->select('wu.id, wu.stu_teacher_id, wu.fullname as student_name, 
+    c.name as class_name, cs.name as section_name, wu.email, wu.classes as class_id, wu.class_section as section_id');
+    $this->db->from('web_user wu');
+    $this->db->join('classes c', 'c.id = wu.classes', 'left');
+    $this->db->join('class_section cs', 'cs.id = wu.class_section', 'left');
+    $this->db->where('wu.stu_teacher_id', $teacher_code);
+    $this->db->where('wu.user_type', 'student');
+    // $this->db->where('wu.status', 1);
 
     // Apply class/section filters if provided
     // if (!empty($filters['class'])) {
@@ -53,8 +56,8 @@ class TestAvailabilityModel extends CI_Model
   {
     $this->db->select('id, paper_mode, date_start, date_end');
     $this->db->from('paper_assign');
-    $this->db->where('class_name', $student['class_name']);
-    $this->db->where('section_name', $student['section_name']);
+    $this->db->where('class_name', $student['class_id']);
+    $this->db->where('section_name', $student['section_id']);
     $this->db->where('teacher_id', $teacher_email);
     $this->db->where('status', 1);
 
