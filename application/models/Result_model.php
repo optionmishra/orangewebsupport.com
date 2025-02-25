@@ -17,7 +17,8 @@ class Result_model extends CI_Model
    */
   public function get_student_submissions($class, $section, $student_code, $assign_id)
   {
-    $this->db->select('student_id, paper_mode, SUM(ans_marks) as obtained_marks, SUM(qus_marks) as total_marks, paper_date');
+    // $this->db->select('student_id, paper_mode, SUM(ans_marks) as obtained_marks, SUM(qus_marks) as total_marks, paper_date');
+    $this->db->select('MAX(student_id) as student_id, paper_mode, SUM(ans_marks) as obtained_marks, SUM(qus_marks) as total_marks, MAX(paper_date) as paper_date');
     $this->db->from('paper_submision');
     $this->db->where('student_class', $class);
     $this->db->where('student_section', $section);
