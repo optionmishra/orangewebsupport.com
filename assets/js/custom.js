@@ -56,7 +56,7 @@ $("#update-teacher").on("aftersubmit", function (e, data) {
 	toastr[data.type](data.message);
 	if (data.type === "success") {
 		window.location.href =
-			"https://www.touchpadwebsupport.com/superadmin/web_user_teacher";
+			"https://www.orangewebsupport.co.in/superadmin/web_user_teacher";
 	}
 });
 
@@ -852,7 +852,7 @@ $(document).ready(function () {
 		var web_id = $("#user_id").val();
 
 		$.ajax({
-			url: "https://www.touchpadwebsupport.com/admin_master/get_serieschange_update",
+			url: "https://www.orangewebsupport.co.in/admin_master/get_serieschange_update",
 			method: "post",
 			data: { bid: valueSelected, webid: web_id },
 			success: function (response) {
@@ -866,7 +866,7 @@ $(document).ready(function () {
 	var valueSelected = $("#boardget").find(":selected").val();
 	var web_id = $("#user_id").val();
 	$.ajax({
-		url: "https://www.touchpadwebsupport.com/admin_master/get_series_update",
+		url: "https://www.orangewebsupport.co.in/admin_master/get_series_update",
 		method: "post",
 		data: { bid: valueSelected, webid: web_id },
 		success: function (response) {
@@ -2126,7 +2126,7 @@ $("#addStudent").on("aftersubmit", function (e, data) {
 	if (data.type === "success") {
 		$(this).trigger("reset");
 		$("#add-new-student").modal("hide");
-		//window.location.href = 'http://www.touchpadwebsupport.com/dashboard';
+		//window.location.href = 'http://www.orangewebsupport.co.in/dashboard';
 		window.location.href = "";
 		$(".register-message-box").removeClass("d-none");
 		$(".register-message-box").html(
@@ -2141,7 +2141,7 @@ $("#addTeacher").on("aftersubmit", function (e, data) {
 	if (data.type === "success") {
 		$(this).trigger("reset");
 		$("#add-new-teacher").modal("hide");
-		// window.location.href = 'http://www.touchpadwebsupport.com/dashboard';
+		// window.location.href = 'http://www.orangewebsupport.co.in/dashboard';
 		window.location.href = "";
 		$(".register-message-box").removeClass("d-none");
 		$(".register-message-box").html(
