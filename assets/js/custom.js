@@ -56,7 +56,7 @@ $("#update-teacher").on("aftersubmit", function (e, data) {
 	toastr[data.type](data.message);
 	if (data.type === "success") {
 		window.location.href =
-			"https://www.orangewebsupport.co.in/superadmin/web_user_teacher";
+			"https://orangewebsupport.co.in/superadmin/web_user_teacher";
 	}
 });
 
@@ -852,7 +852,7 @@ $(document).ready(function () {
 		var web_id = $("#user_id").val();
 
 		$.ajax({
-			url: "https://www.orangewebsupport.co.in/admin_master/get_serieschange_update",
+			url: "https://orangewebsupport.co.in/admin_master/get_serieschange_update",
 			method: "post",
 			data: { bid: valueSelected, webid: web_id },
 			success: function (response) {
@@ -866,7 +866,7 @@ $(document).ready(function () {
 	var valueSelected = $("#boardget").find(":selected").val();
 	var web_id = $("#user_id").val();
 	$.ajax({
-		url: "https://www.orangewebsupport.co.in/admin_master/get_series_update",
+		url: "https://orangewebsupport.co.in/admin_master/get_series_update",
 		method: "post",
 		data: { bid: valueSelected, webid: web_id },
 		success: function (response) {
@@ -1981,7 +1981,7 @@ $(".supportTables").on("click", ".delete_support", function () {
 			// Delete Files
 			$.ajax({
 				url:
-					"https://www.orangewebsupport.co.in/" +
+					"https://orangewebsupport.co.in/" +
 					"admin_master/delete_websupport_files",
 				type: "post",
 				dataType: "json",
