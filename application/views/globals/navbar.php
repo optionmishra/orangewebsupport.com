@@ -52,6 +52,7 @@
 			<a class="app-menu__item" href="superadmin/state"><i class="fa fa-graduation-cap app-menu__icon" aria-hidden="true"></i> <span class="app-menu__label"> States</span></a>
 
 			<a class="app-menu__item" href="superadmin/city"><i class="fa fa-graduation-cap app-menu__icon" aria-hidden="true"></i> <span class="app-menu__label"> City</span></a>
-
+		</li>
+		<li><a class="app-menu__item" href="batch_registration" target="_blank"><i class="fa fa-list app-menu__icon" aria-hidden="true"></i> <span class="app-menu__label"> Batch Student Registration</span></a>
 	</ul>
 </aside>
