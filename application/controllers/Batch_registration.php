@@ -376,7 +376,7 @@ class Batch_registration extends CI_Controller
 
     foreach ($studentsData as $student) {
       // Skip if email already exists
-      if (in_array(strtolower(trim($student['EMAIL'])), $existingEmails)) {
+      if (in_array(strtolower(trim($student['EMAIL'])), array_map('strtolower', $existingEmails))) {
         continue;
       }
 
