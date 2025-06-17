@@ -85,6 +85,15 @@ class Batch_registration extends CI_Controller
     $standard = $this->input->post('standard');
     $section = $this->input->post('section');
 
+    // Validate Teacher Code
+    $teacherData = $this->getTeacherData($teacherCode);
+    if (!$teacherData) {
+      return $this->output
+        ->set_content_type('application/json')
+        ->set_status_header(400)
+        ->set_output(json_encode(['error' => 'Invalid teacher code']));
+    }
+
     // Check if file was uploaded
     if (!isset($_FILES['file']) || $_FILES['file']['error'] !== UPLOAD_ERR_OK) {
       return $this->output
@@ -367,7 +376,7 @@ class Batch_registration extends CI_Controller
 
     foreach ($studentsData as $student) {
       // Skip if email already exists
-      if (in_array($student['EMAIL'], $existingEmails)) {
+      if (in_array(strtolower(trim($student['EMAIL'])), $existingEmails)) {
         continue;
       }
 
