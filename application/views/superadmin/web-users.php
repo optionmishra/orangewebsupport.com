@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Users Management</title>
-    <script type="module" crossorigin src="<?= base_url('assets/web-users/assets/index-Dg0C0uTv.js?>') ?>"></script>
-    <link rel="stylesheet" crossorigin href="<?= base_url('assets/web-users/assets/index-C7RaXoZb.css') ?>">
+    <script type="module" crossorigin src="<?= base_url('assets/web-users/assets/index-BY4mmClW.js?>') ?>"></script>
+    <link rel="stylesheet" crossorigin href="<?= base_url('assets/web-users/assets/index-DxBGfEZl.css') ?>">
 </head>
 
 <body>
