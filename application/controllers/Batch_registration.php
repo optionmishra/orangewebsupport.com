@@ -46,38 +46,6 @@ class Batch_registration extends CI_Controller
       ->set_output(json_encode($sections));
   }
 
-  // public function store()
-  // {
-  //   $school = $this->input->post('school');
-  //   $teacherCode = $this->input->post('teacherCode');
-  //   $standard = $this->input->post('standard');
-  //   $section = $this->input->post('section');
-  //   $fileName = $this->input->post('fileName');
-
-  //   $destination_path = $this->upload_directory . $fileName;
-  //   $studentsData = $this->csvToArray($destination_path);
-
-  //   foreach ($studentsData as $student) {
-  //     $check = $this->checkEmailExists($student['EMAIL']);
-  //     if (!$check) {
-  //       $student_data['name'] = $student['NAME'];
-  //       $student_data['mobile'] = $student['MOBILE'];
-  //       $student_data['email'] = $student['EMAIL'];
-  //       $student_data['password'] = $student['PASSWORD'];
-  //       $student_data['pin'] = '123456';
-  //       $student_data['school_name'] = $school;
-  //       $student_data['address'] = ' ';
-  //       $student_data['stu_teacher_id'] = $teacherCode;
-  //       $student_data['city'] = ' ';
-  //       $student_data['state'] = ' ';
-  //       $student_data['class'] = $standard;
-  //       $student_data['class_section'] = $section;
-  //       $this->add_student_custom($student_data);
-  //     }
-  //   }
-  //   return true;
-  // }
-
   public function preview()
   {
     $school = $this->input->post('school');
@@ -162,9 +130,9 @@ class Batch_registration extends CI_Controller
         'standard' => $standard,
         'section' => $section,
         'fileName' => $fileName,
+        'forceReg' => $this->input->post('forceReg'),
       ],
       'studentsData' => $previewData,
-      // 'file_path' => $destination_path
     ];
 
     return $this->output
@@ -195,7 +163,6 @@ class Batch_registration extends CI_Controller
   {
     $teacher_code = $student_data['stu_teacher_id'];
     $check_tu = $this->WebModel->validate_student($teacher_code);
-    // $teacher_book = $check_tu['subject'];
     $board = $check_tu['board_name'];
     $start_session = $check_tu['session_start'];
     $end_session = $check_tu['session_end'];
@@ -212,11 +179,9 @@ class Batch_registration extends CI_Controller
       foreach ($subjects as $subject) {
         $books[] = $subject->name;
       }
-      // select 1 subject for student based on his class
       if (in_array($student_class, $value)) {
         $teacher_book = $key;
       }
-      // end mod
     }
     $book_name = implode(',', $books);
 
@@ -247,24 +212,12 @@ class Batch_registration extends CI_Controller
 
   private function csvToArray($filePath, $delimiter = ',', $enclosure = '"', $lineEnding = "\r\n", $sheetIndex = 0, $header = true)
   {
-    //Create excel reader after determining the file type
     $inputFileName = $filePath;
-    /**  Identify the type of $inputFileName  **/
     $inputFileType = 'CSV';
-    /**  Create a new Reader of the type that has been identified  **/
     $objReader = PHPExcel_IOFactory::createReader($inputFileType);
-    // $objReader->setDelimiter($delimiter);
-    // $objReader->setEnclosure($enclosure);
-    // $objReader->setLineEnding($lineEnding);
-    // $objReader->setSheetIndex($sheetIndex);
-    // /** Set read type to read cell data onl **/
-    // $objReader->setReadDataOnly(true);
-    /**  Load $inputFileName to a PHPExcel Object  **/
     $objPHPExcel = $objReader->load($inputFileName);
-    //Get worksheet and built array with first row as header
     $objWorksheet = $objPHPExcel->getActiveSheet();
 
-    //excel with first row header, use header as key
     if ($header) {
       $highestRow    = $objWorksheet->getHighestRow();
       $highestColumn = $objWorksheet->getHighestColumn();
@@ -283,7 +236,6 @@ class Batch_registration extends CI_Controller
         }
       }
     } else {
-      //excel sheet with no header
       $namedDataArray = $objWorksheet->toArray(null, true, true, true);
     }
 
@@ -303,6 +255,9 @@ class Batch_registration extends CI_Controller
       }
     }
 
+    // Get forceReg parameter (defaults to false)
+    $forceReg = $this->input->post('forceReg') === 'true' || $this->input->post('forceReg') === true;
+
     $destination_path = $this->upload_directory . $inputData['fileName'];
 
     // Validate file exists
@@ -313,32 +268,23 @@ class Batch_registration extends CI_Controller
     $studentsData = $this->csvToArray($destination_path);
 
     if (empty($studentsData)) {
-      return ['success' => false, 'message' => 'No valid student data found in CSV'];
+      return $this->output
+        ->set_content_type('application/json')
+        ->set_status_header(200)
+        ->set_output(json_encode(['success' => false, 'message' => 'No valid student data found in CSV']));
     }
 
-    // Get teacher data once (avoid repeated queries)
+    // Get teacher data once
     $teacherData = $this->getTeacherData($inputData['teacherCode']);
     if (!$teacherData) {
       throw new RuntimeException("Invalid teacher code: {$inputData['teacherCode']}");
-    }
-
-    // Prepare batch data
-    $batchData = $this->prepareBatchStudentData($studentsData, $inputData, $teacherData);
-
-    if (empty($batchData)) {
-      return ['success' => false, 'message' => 'No new students to insert (all emails already exist)'];
     }
 
     // Use database transaction for data integrity
     $this->db->trans_start();
 
     try {
-      // Batch insert for better performance
-      $result = $this->db->insert_batch('web_user', $batchData);
-
-      if (!$result) {
-        throw new RuntimeException('Failed to insert student data');
-      }
+      $result = $this->processStudentData($studentsData, $inputData, $teacherData, $forceReg);
 
       $this->db->trans_complete();
 
@@ -346,46 +292,37 @@ class Batch_registration extends CI_Controller
         throw new RuntimeException('Transaction failed');
       }
 
-      $data = [
-        'success' => true,
-        'message' => count($batchData) . ' students successfully added',
-        'inserted_count' => count($batchData)
-      ];
-
       return $this->output
         ->set_content_type('application/json')
         ->set_status_header(200)
-        ->set_output(json_encode($data));
+        ->set_output(json_encode($result));
     } catch (Exception $e) {
       $this->db->trans_rollback();
       throw $e;
     }
   }
 
-  private function prepareBatchStudentData($studentsData, $inputData, $teacherData)
+  private function processStudentData($studentsData, $inputData, $teacherData, $forceReg)
   {
-    // Get existing emails in one query to avoid N+1 problem
+    // Get existing emails and their IDs
     $emails = array_column($studentsData, 'EMAIL');
-    $existingEmails = $this->getExistingEmails($emails);
+    $existingUsers = $this->getExistingUsers($emails);
 
     // Prepare book data once
     $bookData = $this->prepareBookData($teacherData, $inputData['standard']);
 
-    $batchData = [];
+    $insertData = [];
+    $updateData = [];
     $timestamp = date('Y-m-d H:i:s');
 
     foreach ($studentsData as $student) {
-      // Skip if email already exists
-      if (in_array(strtolower(trim($student['EMAIL'])), array_map('strtolower', $existingEmails))) {
-        continue;
-      }
-
       // Validate required student fields
       if (empty($student['EMAIL']) || empty($student['NAME'])) {
         continue; // Skip invalid records
       }
 
-      $batchData[] = [
+      $email = strtolower(trim($student['EMAIL']));
+      $studentRecord = [
         'session_start' => $teacherData['session_start'],
         'session_end' => $teacherData['session_end'],
         'classes' => $inputData['standard'],
@@ -397,43 +334,101 @@ class Batch_registration extends CI_Controller
         'book_name' => $bookData['book_names'],
         'fullname' => trim($student['NAME']),
         'mobile' => $student['MOBILE'] ?? '',
-        'email' => strtolower(trim($student['EMAIL'])),
-        'pin' => '123456', // Consider making this configurable
-        'address' => '', // Use empty string instead of space
+        'email' => $email,
+        'pin' => '123456',
+        'address' => '',
         'stu_teacher_id' => $inputData['teacherCode'],
         'city' => '',
         'state' => '',
         'class_section' => $inputData['section'],
         'school_name' => $inputData['school'],
         'password' => $student['PASSWORD'] ?? $this->generateDefaultPassword(),
-        // 'created_at' => $timestamp, // Add timestamp if your table supports it
-        // 'updated_at' => $timestamp
       ];
+
+      // Check if email exists
+      if (isset($existingUsers[$email])) {
+        if ($forceReg) {
+          // Add to update batch
+          $updateData[] = [
+            'id' => $existingUsers[$email]['id'],
+            'data' => $studentRecord
+          ];
+        }
+        // If forceReg is false, skip existing emails (do nothing)
+      } else {
+        // Add to insert batch
+        $insertData[] = $studentRecord;
+      }
     }
 
-    return $batchData;
+    $insertedCount = 0;
+    $updatedCount = 0;
+
+    // Process insertions
+    if (!empty($insertData)) {
+      $result = $this->db->insert_batch('web_user', $insertData);
+      if ($result) {
+        $insertedCount = count($insertData);
+      }
+    }
+
+    // Process updates
+    if (!empty($updateData)) {
+      foreach ($updateData as $update) {
+        $this->db->where('id', $update['id']);
+        $result = $this->db->update('web_user', $update['data']);
+        if ($result) {
+          $updatedCount++;
+        }
+      }
+    }
+
+    // Prepare response message
+    $message = [];
+    if ($insertedCount > 0) {
+      $message[] = "{$insertedCount} students successfully added";
+    }
+    if ($updatedCount > 0) {
+      $message[] = "{$updatedCount} students successfully updated";
+    }
+    if (empty($message)) {
+      $message[] = "No students processed";
+    }
+
+    return [
+      'success' => ($insertedCount > 0 || $updatedCount > 0),
+      'message' => implode(', ', $message),
+      'inserted_count' => $insertedCount,
+      'updated_count' => $updatedCount,
+      'total_processed' => $insertedCount + $updatedCount
+    ];
   }
 
   private function getTeacherData($teacherCode)
   {
-    $this->db->where('teacher_code', $teacherCode); // Adjust field name as needed
+    $this->db->where('teacher_code', $teacherCode);
     $this->db->select('board_name, session_start, session_end, series_classes');
-    $query = $this->db->get('web_user'); // Adjust table name as needed
+    $query = $this->db->get('web_user');
 
     return $query->row_array();
   }
 
-  private function getExistingEmails($emails)
+  private function getExistingUsers($emails)
   {
     if (empty($emails)) {
       return [];
     }
 
-    $this->db->select('email');
+    $this->db->select('id, email');
     $this->db->where_in('email', array_map('strtolower', array_map('trim', $emails)));
     $query = $this->db->get('web_user');
 
-    return array_column($query->result_array(), 'email');
+    $existingUsers = [];
+    foreach ($query->result_array() as $user) {
+      $existingUsers[$user['email']] = ['id' => $user['id']];
+    }
+
+    return $existingUsers;
   }
 
   private function prepareBookData($teacherData, $studentClass)
@@ -452,7 +447,6 @@ class Batch_registration extends CI_Controller
         $books[] = $subject->name;
       }
 
-      // Select 1 subject for student based on class
       if (in_array($studentClass, $value)) {
         $teacher_book = $key;
       }
@@ -466,7 +460,6 @@ class Batch_registration extends CI_Controller
 
   private function generateDefaultPassword()
   {
-    // Generate a secure default password or return a default value
-    return bin2hex(random_bytes(4)); // 8 character random password
+    return bin2hex(random_bytes(4));
   }
 }
